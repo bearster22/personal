@@ -227,7 +227,7 @@ body {	background:  url(img/menu1.png) top left no-repeat #d7d7d7;
 		font-weight: 400; }
 
 
-p { padding: .75em 0em; }
+p { padding: 1em 0em; }
 
 
 a {	color: #f03300;
@@ -254,13 +254,13 @@ em { font-weight: 400;
 /* Styling for main content areas ==============================
    =============================================================  */
 
-section { margin: 2em 3em 2em 330px; 
+section { margin: 2em 4em 3em 330px; 
 		  background: #ffffff;
 		  -webkit-border-radius: 20px;
 		  -moz-border-radius: 20px;
 		  border-radius: 20px; 
 		  min-width: 840px;
-		  padding: 1em 2em 3em 2em; }
+		  padding: 2em 3em 3em 3em; }
 
 h1, h2, h3 { font-family: 'Nunito', sans-serif;
 		 font-weight: 400; 
@@ -291,7 +291,9 @@ aside {float: right;
 		margin-bottom: .8em;
 		text-align: center;}
 		
-aside img {border: 1px solid #d7d7d7;}
+aside img {border: 1px solid #d7d7d7;
+		   margin: 0em 2em 2em 1em;
+		   }
 		 
 
 
