@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Photography: Sarah Barrow Web Design</title>
+<title>Hire Me: Sarah Barrow Web Design</title>
 <meta name="description" content="Sarah Barrow is a creative, strategic web professional specializing in website design and development." />  
 
 <!-- STYLES ETC -->
@@ -12,6 +12,7 @@
 
 <!-- MODERNIZR: all other scripts at bottom of page -->
 <script src="js/modernizr-customSB.min.js" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -24,27 +25,44 @@
 	<ul>
 		<li><a href="web-portfolio.html" title="Portfolio">Portfolio</a></li>
 	    <li><a href="web-services.html" title="Services">Services</a></li>
-        <li><a id="active_item" href="photography.html" title="Photography and Design">Photography and Design</a></li>
+        <li><a href="photography.html" title="Photography">Photography</a></li>
         <!--<li><a href="blog/index.html" title="Blog">Blog</a></li>-->
-        <li><a href="contact.html" title="Contact">Hire Me!</a></li>
+        <li><a href="contact.html" title="Contact">Contact</a></li>
     </ul>
 </nav>
     
 <article>    
-	<h1>Photography, Art, and Design</h1>
-    <p>Need better paragraph here talking about capabilities, not couching as amateur.</p>
-    <section id="photography">
-    	<h2>Photography</h2>
-        <!-- insert flickr feed here -->
+    <!-- INTRO CONTENT -->
+	<section id="intro">
+    	<!-- img goes here -->
+        <h1>Hello!</h1>
+        <p>I'm an experienced, affordable web designer and developer in Minneapolis, MN. I'm available for freelance, contracting, and consulting in:</p>
+        <p>web design and development, usability, digital marketing campaigns, information architecture, SEO and SEM, content strategy.</p> 
+	</section>
+        
+    <!-- BUTTONS -->
+    <section id="home_nav">
+    	<div id="portfolio_button">
+       		<!-- img goes here -->
+            <h1>Portfolio</h1>
+            <p>Paragraph about portfolio</p>
+        </div>
+        <div id="services_button">
+        	<!-- img goes here -->
+            <h1>Services</h1>
+            <p>Paragraph about portfolio</p>
+        </div>
+        <div id="photography_button">
+        	<!-- img goes here -->
+            <h1>Photography</h1>
+            <p>Paragraph about portfolio</p>
+        </div>
+        <div id="blog_button">
+        	<!-- img goes here -->
+            <h1>Blog</h1>
+            <p>Paragraph about portfolio</p>
+        </div>
     </section>
-    <section id="design">
-    	<h2>Art and Design</h2>
-    	<!-- insert flickr feed here -->
-    </section>
-    <section id="instagram">
-    	<h2>Instagram</h2>
-    	<!-- insert instagram feed here -->
-    </section>    
 </article>
     
 <footer>

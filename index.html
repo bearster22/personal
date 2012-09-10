@@ -1,120 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <title>Sarah Barrow LLC</title>
-  <meta name="description" content="Sarah Barrow is a creative, strategic web professional specializing in website design and development. Special interest/focus on information architecture, user experience, and search engine optimization." />
-  <meta name="keywords" content="user experience design; user interface design; digital marketing; front-end design; online marketing; marketing strategy; web design; SEO;" />
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-<script src="Scripts/AC_ActiveX.js" type="text/javascript"></script>
-<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<meta charset="utf-8" />
+<title>Sarah Barrow Web Design</title>
+<meta name="description" content="Sarah Barrow is a creative, strategic web professional specializing in website design and development." />  
 
-  <link rel="stylesheet" href="style.css">
-  <link href='http://fonts.googleapis.com/css?family=Nunito:700|Open+Sans:400,400italic' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="img/favicon.ico">
+<!-- STYLES ETC -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<link rel="shortcut icon" href="img/favicon.ico">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,700' rel='stylesheet' type='text/css'>
+
+<!-- MODERNIZR: all other scripts at bottom of page -->
+<script src="js/modernizr-customSB.min.js" type="text/javascript"></script>
 </head>
 
 <body>
-
-  <header id="navigation">
-      
-      		<a href="index.html" onClick="_gaq.push(['_trackEvent', 'internal', 'logo', 'home']);"><img src="img/logo.png" id="logo" /></a>
-        <h1>
-        	<a href="index.html" onClick="_gaq.push(['_trackEvent', 'internal', 'logo', 'home']);">Sarah Barrow</a>
-       </h1>
-    <nav id="mainnav">
-      <ul>
-        <li><a href="web-design.html" title="Web Design and User Experience">Web Design and User Experience</a></li>
-        <li><a href="online-marketing.html" title="Digital Marketing Campaigns">Digital Marketing Campaigns</a></li>
-        <li><a href="photography.html" title="Photography, Design, and Art">Photography, Design, and Art</a></li>
-        <li><a href="about.html" title="About Sarah and Contact">About and Contact</a></li>
-      </ul>
-    </nav>
-
-  </header>
-
- 
-<section class="main">   
-
-  <header>
-    <h1>Sarah Barrow</h1>
-  </header>
-  
-  <p>I'm a web and user experience designer, online marketer, photographer, and designer located in Minneapolis, MN. I am available for consulting and freelance work on web design, user experience, and digital marketing campaigns, and other digital tactics.</p>
-
-
-<!-- icons courtesy of http://www.webdesignerdepot.com/2010/07/125-exclusive-free-icons-reflection/  -->
-	
+<header>
+	<div id="lead"><h1>Sarah Barrow</h1></div>
+    <div id="logo"><a href="index.html" title="Sarah Barrow Web Design">SB</a></div>
+    <div><h1>Web Design</h1></div>
+</header>  
+  	
+<nav>
+	<ul>
+		<li><a href="web-portfolio.html" title="Portfolio">Portfolio</a></li>
+	    <li><a href="web-services.html" title="Services">Services</a></li>
+        <li><a href="photography.html" title="Photography and Design">Photography and Design</a></li>
+        <!--<li><a href="blog/index.html" title="Blog">Blog</a></li>-->
+        <li><a href="contact.html" title="Contact">Hire me!</a></li>
+    </ul>
+</nav>
     
+<article>    
+    <!-- INTRO CONTENT -->
+	<section id="intro">
+    	<!-- img goes here -->
+        <h1>Hello!</h1>
+        <p>I'm an experienced, affordable web designer and developer in Minneapolis, MN. I'm available for freelance, contracting, and consulting in:</p>
+        <p>web design and development, usability, digital marketing campaigns, information architecture, SEO and SEM, content strategy.</p> 
+	</section>
+        
+    <!-- BUTTONS -->
+    <section id="home_nav">
+    	<div id="portfolio_button">
+       		<!-- img goes here -->
+            <h1>Portfolio</h1>
+            <p>Paragraph about portfolio</p>
+        </div>
+        <div id="services_button">
+        	<!-- img goes here -->
+            <h1>Services</h1>
+            <p>Paragraph about portfolio</p>
+        </div>
+        <div id="photography_button">
+        	<!-- img goes here -->
+            <h1>Photography</h1>
+            <p>Paragraph about portfolio</p>
+        </div>
+        <div id="blog_button">
+        	<!-- img goes here -->
+            <h1>Blog</h1>
+            <p>Paragraph about portfolio</p>
+        </div>
+    </section>
+</article>
     
-     <article class="button" id="web-button">
-     <a href="web-design.html" title="Web Design and User Experience" onClick="_gaq.push(['_trackEvent', 'internal', 'logo', 'web-design']);">
-     <img src="img/monitor-gray.png" height="125" width="125" alt="Web Design and User Experience" /><br />
-     <h2>Web Design</h2>
-     </a>
-     <p>User experience and front-end web design, branding, SEO, and information architecture.</p>
-     </article>
-
-	 <article class="button" id="marketing-button">
-     <a href="online-marketing.html" title="Digital Marketing Campaigns" onClick="_gaq.push(['_trackEvent', 'internal', 'logo', 'digital-marketing']);">
-          <img src="img/piechart-gray.png" height="125" width="125" alt="Digital Marketing Campaigns" /><br />
-  	 <h2>Digital Marketing</h2>
-     </a>
-     <p>Pay-per-click, display ads, social ads, and other digital marketing solutions.</p>
-     </article>
-     
-     
-	 <article class="button" id="photo-button">
-     <a href="photography.html" title="Photography and Design" onClick="_gaq.push(['_trackEvent', 'internal', 'logo', 'photography']);">
-     <img src="img/image-gray.png" height="125" width="125" alt="Photography and Design" /><br />
-     <h2>Photography/Design</h2>
-     </a>
-     <p>Travel, landscape, and product photography; art; and graphic design projects.</p>
-     </article>
-     
-
-	 <article class="button" id="about-button">
-	     <a href="about.html" title="About Sarah and Contact" onClick="_gaq.push(['_trackEvent', 'internal', 'logo', 'about']);">
-          <img src="img/quote-gray.png" height="125" width="125" alt="About Sarah" /><br />
-	 <h2>About</h2>
-     </a>
-     <p>About Sarah: experience, contact information, and hiring opportunities.</p>
-     </article>     
-
-</section>
- 
-
 <footer>
+	<div id="copyright">&copy; Sarah Barrow Web Design<br />
+    	All rights reserved</div>
+    <div id="contact"><a href="contact.html" title="Hire me!">Hire Me<br />to get started!</a></div>
+    <div id="social">
+    	<ul>
+        	<li><a href="http://www.linkedin.com/in/scbarrow" title="LinkedIn" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'LinkedIn']);">linkedin</a></li>
+            <li><a href="http://twitter.com/bearster22" title="Twitter" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'twitter']);">twitter</a></li>
+            <li><a href="https://github.com/bearster22" title="GitHub" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'github']);">github</a></li>
+        </ul>
+    </div>
+</footer>            
 
-    <p>&copy; 2012 Sarah Barrow</p>
 
-  </footer>
-  
-  
-  
-  
-  <!-- Google Analytics -->
 
-<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-29494340-1']);
-  _gaq.push(['_trackPageview']);
+         	
+<!-- JAVASCRIPT -->
+<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
 
-</script>
   
-  
-  
-  
+<!-- GOOGLE ANALYTICS -->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-29494340-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
 
 </body>
 </html>

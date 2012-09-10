@@ -1,0 +1,180 @@
+////////////////// 
+// Main LESS stylesheet for sarahbarrow.com, hooray!
+//////////////////
+
+@import "reset.css";
+@import "../webfonts/ss-social.css"; 
+@import "../webfonts/ss-standard.css";
+@import "../webfonts/Chunkfive.css";
+@import "grid.less";
+
+
+//////////////////
+// VARIABLES 
+//////////////////
+
+@flame: 	#ed4148;
+@aqua: 		#b3e1ea;
+@lime: 		#bfc738;
+@dark: 		#4f4f4f;
+@gray: 		#d7d7d7;
+@aqua-link:	#b3e1ea - #444;
+
+
+//////////////////
+// BASE
+//////////////////
+
+/* BASE */
+		
+html 	{	font-size: 62.5%;						/* setting REM unit */
+			background-color: @gray;
+		}
+		
+.text	{	color: @dark;							/* base mixin for paragraph copy */
+			font-family: 'Open Sans', sans-serif;
+			font-size: 1.6rem;  	
+			line-height: 2.4rem;	
+		}
+				
+.hdrs	{	color: @flame;  						/* mixin for headers */
+			font-family: 'ChunkFiveRegular', serif;
+			padding: 2rem 0 .4rem 0;
+		}
+		
+.link	{	color: @flame;							/*mixin for links*/
+			text-decoration: none;
+		}
+
+body	{	.text;
+		}
+		
+	
+h1		{	font-size: 3.2rem;
+			line-height: 4.8rem;
+			.hdrs;
+		}	
+		
+h2		{	font-size: 2.4rem;
+			line-height: 2.4rem;			
+			.hdrs;							
+		}
+		
+h3		{	.text;
+			font-size: 2rem;
+		}
+		
+a		{	.link;
+			&:hover	{text-decoration: underline;}
+			&:visited {color: @aqua-link;}
+		}
+			
+		
+
+//////////////////
+// SEMANTIC GRID
+//////////////////
+
+/* SEMANTIC.GS CUSTOMIZATIONS */
+
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+@total-width: 100%;				/* makes layout fluid */
+
+
+//////////////////
+// LAYOUT
+//////////////////
+
+
+/* LAYOUT */
+		
+header	{	height: 24rem;								/* ensures background color covers floating columns below */
+			background-color: @aqua;
+			.hdrs;
+			div	{	.column(3);							/* spaces and centers 3 header elements */
+					margin-top: 8rem;
+					&#lead	{	.push(1);
+								text-align: right;
+							}
+					&#logo	{	.column(4);
+								text-align: center;
+								margin-top: 6rem;
+							}
+					h1		{	font-size: 2.4rem;
+								line-height: 2.4rem;
+								color: #fff;
+							}
+							a, a:hover, 
+							a:visited	{	color: @flame;
+											text-decoration: none;
+											font-size: 12rem;
+											line-height: 12rem;
+											display: block;
+										}
+				}
+		}				
+		
+nav		{	.column(10);
+			.push(1);
+			background-color: #fff;
+			ul	{	border: 2px solid #fff;
+					background-color: @aqua;
+					margin-right: -4rem;
+					float: right;
+					clear: both;
+					li	{	float: left;
+							a:visited	{	color: #fff;
+										}
+							a	{	color: #fff;
+									font-weight: 700;
+									display: block;
+									padding: 2rem;
+									&:hover	{	color: @flame;
+												text-decoration: none;
+											}
+								}
+							
+						}
+				}
+		}			
+		
+article	{	.column(10);
+			.push(1);
+			background-color: #ffffff;
+		}
+		
+section	{	.column(10);
+			.push(1);
+			padding: 2.4rem 0rem;
+			&#home_nav	{	.row(10);	
+							.push(1);
+							h1	{	font-size: 2rem;
+								}	
+							div	{	.column(2,10);
+									text-align: center;
+								}
+						}	
+		}		
+		
+		
+footer	{	width: 100%;
+			display: block;
+			clear: both;
+			background-color: @gray;
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+			div	{	padding-top: 4.8rem;
+					&#copyright	{	.column(3);               /* aligning footer elements */
+									.push(1);	
+								}
+					&#contact	{	.column(4);
+									.push(0);
+									text-align: center;
+								}
+					&#social	{	.column(2);
+									.push(2);
+								}
+				}
+		}

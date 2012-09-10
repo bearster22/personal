@@ -1,0 +1,250 @@
+@import "reset.css";
+
+@import "../webfonts/ss-social.css";
+
+@import "../webfonts/ss-standard.css";
+
+@import "../webfonts/Chunkfive.css";
+body {
+  width: 100%;
+  *zoom: 1;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+/* BASE */
+html {
+  font-size: 62.5%;
+  /* setting REM unit */
+
+  background-color: #d7d7d7;
+}
+.text {
+  color: #4f4f4f;
+  /* base mixin for paragraph copy */
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.hdrs {
+  color: #ed4148;
+  /* mixin for headers */
+
+  font-family: 'ChunkFiveRegular', serif;
+  padding: 2rem 0 .4rem 0;
+}
+.link {
+  color: #ed4148;
+  /*mixin for links*/
+
+  text-decoration: none;
+}
+body {
+  color: #4f4f4f;
+  /* base mixin for paragraph copy */
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+h1 {
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  color: #ed4148;
+  /* mixin for headers */
+
+  font-family: 'ChunkFiveRegular', serif;
+  padding: 2rem 0 .4rem 0;
+}
+h2 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  color: #ed4148;
+  /* mixin for headers */
+
+  font-family: 'ChunkFiveRegular', serif;
+  padding: 2rem 0 .4rem 0;
+}
+h3 {
+  color: #4f4f4f;
+  /* base mixin for paragraph copy */
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-size: 2rem;
+}
+a {
+  color: #ed4148;
+  /*mixin for links*/
+
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: #6f9da6;
+}
+/* SEMANTIC.GS CUSTOMIZATIONS */
+/* makes layout fluid */
+/* LAYOUT */
+header {
+  height: 24rem;
+  /* ensures background color covers floating columns below */
+
+  background-color: #b3e1ea;
+  color: #ed4148;
+  /* mixin for headers */
+
+  font-family: 'ChunkFiveRegular', serif;
+  padding: 2rem 0 .4rem 0;
+}
+header div {
+  display: inline;
+  float: left;
+  width: 22.916666666666664%;
+  margin: 0 1.0416666666666665%;
+  /* spaces and centers 3 header elements */
+
+  margin-top: 8rem;
+}
+header div#lead {
+  margin-left: 9.374999999999998%;
+  text-align: right;
+}
+header div#logo {
+  display: inline;
+  float: left;
+  width: 31.25%;
+  margin: 0 1.0416666666666665%;
+  text-align: center;
+  margin-top: 6rem;
+}
+header div h1 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  color: #fff;
+}
+header div a,
+header div a:hover,
+header div a:visited {
+  color: #ed4148;
+  text-decoration: none;
+  font-size: 12rem;
+  line-height: 12rem;
+  display: block;
+}
+nav {
+  display: inline;
+  float: left;
+  width: 81.25%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 9.374999999999998%;
+  background-color: #fff;
+}
+nav ul {
+  border: 2px solid #fff;
+  background-color: #b3e1ea;
+  margin-right: -4rem;
+  float: right;
+  clear: both;
+}
+nav ul li {
+  float: left;
+}
+nav ul li a:visited {
+  color: #fff;
+}
+nav ul li a {
+  color: #fff;
+  font-weight: 700;
+  display: block;
+  padding: 2rem;
+}
+nav ul li a:hover {
+  color: #ed4148;
+  text-decoration: none;
+}
+article {
+  display: inline;
+  float: left;
+  width: 81.25%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 9.374999999999998%;
+  background-color: #ffffff;
+}
+section {
+  display: inline;
+  float: left;
+  width: 81.25%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 9.374999999999998%;
+  padding: 2.4rem 0rem;
+}
+section#home_nav {
+  display: block;
+  width: 102.49999999999999%;
+  margin: 0 -1.25%;
+  *zoom: 1;
+  margin-left: 9.374999999999998%;
+}
+section#home_nav:before,
+section#home_nav:after {
+  content: "";
+  display: table;
+}
+section#home_nav:after {
+  clear: both;
+}
+section#home_nav h1 {
+  font-size: 2rem;
+}
+section#home_nav div {
+  display: inline;
+  float: left;
+  width: 17.5%;
+  margin: 0 1.25%;
+  text-align: center;
+}
+footer {
+  width: 100%;
+  display: block;
+  clear: both;
+  background-color: #d7d7d7;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+footer div {
+  padding-top: 4.8rem;
+}
+footer div#copyright {
+  display: inline;
+  float: left;
+  width: 22.916666666666664%;
+  margin: 0 1.0416666666666665%;
+  /* aligning footer elements */
+
+  margin-left: 9.374999999999998%;
+}
+footer div#contact {
+  display: inline;
+  float: left;
+  width: 31.25%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 1.0416666666666665%;
+  text-align: center;
+}
+footer div#social {
+  display: inline;
+  float: left;
+  width: 14.583333333333334%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 17.708333333333332%;
+}
