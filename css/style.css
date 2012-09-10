@@ -90,16 +90,13 @@ a:hover {
   text-decoration: underline;
 }
 a:visited {
-  color: #6f9da6;
+  color: #579eab;
 }
 /* SEMANTIC.GS CUSTOMIZATIONS */
-/* makes layout fluid */
 /* LAYOUT */
 header {
   height: 24rem;
-  /* ensures background color covers floating columns below */
-
-  background-color: #b3e1ea;
+  background-color: #8ad1de;
   color: #ed4148;
   /* mixin for headers */
 
@@ -111,8 +108,6 @@ header div {
   float: left;
   width: 22.916666666666664%;
   margin: 0 1.0416666666666665%;
-  /* spaces and centers 3 header elements */
-
   margin-top: 8rem;
 }
 header div#lead {
@@ -151,7 +146,7 @@ nav {
 }
 nav ul {
   border: 2px solid #fff;
-  background-color: #b3e1ea;
+  background-color: #8ad1de;
   margin-right: -4rem;
   float: right;
   clear: both;
@@ -172,6 +167,9 @@ nav ul li a:hover {
   color: #ed4148;
   text-decoration: none;
 }
+nav ul li a#active_item {
+  color: #ed4148;
+}
 article {
   display: inline;
   float: left;
@@ -180,20 +178,21 @@ article {
   margin-left: 9.374999999999998%;
   background-color: #ffffff;
 }
+article > h1 {
+  padding: 2.4rem 4.8rem;
+}
+article > p {
+  padding: 2.4rem 4.8rem;
+}
 section {
-  display: inline;
-  float: left;
-  width: 81.25%;
-  margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
-  padding: 2.4rem 0rem;
+  padding: 2.4rem 4.8rem;
 }
 section#home_nav {
   display: block;
   width: 102.49999999999999%;
   margin: 0 -1.25%;
   *zoom: 1;
-  margin-left: 9.374999999999998%;
+  padding: 2.4rem 0;
 }
 section#home_nav:before,
 section#home_nav:after {
@@ -213,10 +212,10 @@ section#home_nav div {
   margin: 0 1.25%;
   text-align: center;
 }
+section#home_nav div#portfolio_button {
+  margin-left: 9.374999999999998%;
+}
 footer {
-  width: 100%;
-  display: block;
-  clear: both;
   background-color: #d7d7d7;
   font-size: 1.2rem;
   line-height: 1.6rem;
@@ -229,8 +228,6 @@ footer div#copyright {
   float: left;
   width: 22.916666666666664%;
   margin: 0 1.0416666666666665%;
-  /* aligning footer elements */
-
   margin-left: 9.374999999999998%;
 }
 footer div#contact {
@@ -247,4 +244,22 @@ footer div#social {
   width: 14.583333333333334%;
   margin: 0 1.0416666666666665%;
   margin-left: 17.708333333333332%;
+}
+aside {
+  padding: 2.4rem 4.8rem;
+  text-align: center;
+  border-top: 1px dotted #d7d7d7;
+  border-bottom: 1px dotted #d7d7d7;
+}
+aside h1 {
+  color: #4f4f4f;
+  /* base mixin for paragraph copy */
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-size: 2rem;
+}
+aside p {
+  font-size: 1.3rem;
 }

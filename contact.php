@@ -17,8 +17,9 @@
 
 <body>
 <header>
-	<div id="logo"><a href="index.html" title="Sarah Barrow Web Design">SB</a></div>
-    <h1>Sarah Barrow Web Design</h1>
+	<div id="lead"><h1>Sarah Barrow</h1></div>
+    <div id="logo"><a href="index.html" title="Sarah Barrow Web Design">SB</a></div>
+    <div><h1>Web Design</h1></div>
 </header>  
   	
 <nav>
@@ -27,48 +28,20 @@
 	    <li><a href="web-services.html" title="Services">Services</a></li>
         <li><a href="photography.html" title="Photography">Photography</a></li>
         <!--<li><a href="blog/index.html" title="Blog">Blog</a></li>-->
-        <li><a href="contact.html" title="Contact">Contact</a></li>
+        <li><a id="active-item" href="contact.php" title="Contact">Contact</a></li>
     </ul>
 </nav>
     
 <article>    
-    <!-- INTRO CONTENT -->
-	<section id="intro">
-    	<!-- img goes here -->
-        <h1>Hello!</h1>
-        <p>I'm an experienced, affordable web designer and developer in Minneapolis, MN. I'm available for freelance, contracting, and consulting in:</p>
-        <p>web design and development, usability, digital marketing campaigns, information architecture, SEO and SEM, content strategy.</p> 
-	</section>
-        
-    <!-- BUTTONS -->
-    <section id="home_nav">
-    	<div id="portfolio_button">
-       		<!-- img goes here -->
-            <h1>Portfolio</h1>
-            <p>Paragraph about portfolio</p>
-        </div>
-        <div id="services_button">
-        	<!-- img goes here -->
-            <h1>Services</h1>
-            <p>Paragraph about portfolio</p>
-        </div>
-        <div id="photography_button">
-        	<!-- img goes here -->
-            <h1>Photography</h1>
-            <p>Paragraph about portfolio</p>
-        </div>
-        <div id="blog_button">
-        	<!-- img goes here -->
-            <h1>Blog</h1>
-            <p>Paragraph about portfolio</p>
-        </div>
-    </section>
+    
+<section>insert form here</section>    
+    
 </article>
     
 <footer>
 	<div id="copyright">&copy; Sarah Barrow Web Design<br />
     	All rights reserved</div>
-    <a id="contact" href="contact.html" title="Hire me!">Hire Me<br />to get started!</a>
+    <div id="contact"><a href="contact.html" title="Hire me!">Hire Me<br />to get started!</a></div> <!-- remove? -->
     <div id="social">
     	<ul>
         	<li><a href="http://www.linkedin.com/in/scbarrow" title="LinkedIn" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'LinkedIn']);">linkedin</a></li>
@@ -77,9 +50,6 @@
         </ul>
     </div>
 </footer>            
-
-
-
 
          	
          	

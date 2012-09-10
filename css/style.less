@@ -14,11 +14,11 @@
 //////////////////
 
 @flame: 	#ed4148;
-@aqua: 		#b3e1ea;
+@aqua: 		#8ad1de;
 @lime: 		#bfc738;
 @dark: 		#4f4f4f;
 @gray: 		#d7d7d7;
-@aqua-link:	#b3e1ea - #444;
+@aqua-link:	#8ad1de - #333;
 
 
 //////////////////
@@ -80,7 +80,7 @@ a		{	.link;
 @column-width: 60;
 @gutter-width: 20;
 @columns: 12;
-@total-width: 100%;				/* makes layout fluid */
+@total-width: 100%;				// makes layout fluid
 
 
 //////////////////
@@ -90,10 +90,10 @@ a		{	.link;
 
 /* LAYOUT */
 		
-header	{	height: 24rem;								/* ensures background color covers floating columns below */
+header	{	height: 24rem;								// ensures background color covers floating columns below
 			background-color: @aqua;
 			.hdrs;
-			div	{	.column(3);							/* spaces and centers 3 header elements */
+			div	{	.column(3);							// spaces and centers 3 header elements -- try flexbox instead?
 					margin-top: 8rem;
 					&#lead	{	.push(1);
 								text-align: right;
@@ -134,6 +134,8 @@ nav		{	.column(10);
 									&:hover	{	color: @flame;
 												text-decoration: none;
 											}
+									&#active_item	{	color: @flame;
+													}
 								}
 							
 						}
@@ -143,30 +145,31 @@ nav		{	.column(10);
 article	{	.column(10);
 			.push(1);
 			background-color: #ffffff;
+			& > h1	{	padding: 2.4rem 4.8rem;
+					}
+			& > p	{	padding: 2.4rem 4.8rem;
+					}
 		}
 		
-section	{	.column(10);
-			.push(1);
-			padding: 2.4rem 0rem;
-			&#home_nav	{	.row(10);	
-							.push(1);
+section	{	padding:	2.4rem 4.8rem;
+			&#home_nav	{	.row(10);	                                      // homepage button navigation items
+							padding: 2.4rem 0;
 							h1	{	font-size: 2rem;
 								}	
 							div	{	.column(2,10);
 									text-align: center;
+									&#portfolio_button	{	.push(1);
+														}
 								}
-						}	
+						}
 		}		
 		
 		
-footer	{	width: 100%;
-			display: block;
-			clear: both;
-			background-color: @gray;
+footer	{	background-color: @gray;
 			font-size: 1.2rem;
 			line-height: 1.6rem;
 			div	{	padding-top: 4.8rem;
-					&#copyright	{	.column(3);               /* aligning footer elements */
+					&#copyright	{	.column(3);               // aligning footer elements 
 									.push(1);	
 								}
 					&#contact	{	.column(4);
@@ -177,4 +180,16 @@ footer	{	width: 100%;
 									.push(2);
 								}
 				}
+		}
+		
+		
+aside	{	padding: 2.4rem 4.8rem;
+			text-align: center;
+			border-top: 1px dotted @gray;
+			border-bottom: 1px dotted @gray;
+			& h1	{	.text;
+						font-size: 2rem;
+					}
+			& p		{	font-size: 1.3rem;
+					}
 		}
