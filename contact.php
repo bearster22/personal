@@ -17,16 +17,15 @@
 
 <body>
 <header>
-	<div id="lead"><h1>Sarah Barrow</h1></div>
-    <div id="logo"><a href="index.html" title="Sarah Barrow Web Design">SB</a></div>
-    <div><h1>Web Design</h1></div>
+	<h1 id="hide">Sarah Barrow Web Design</h1>
+	<div><a href="index.html" title="Sarah Barrow Web Design">SB</a></div>
 </header>  
   	
 <nav>
 	<ul>
 		<li><a href="web-portfolio.html" title="Portfolio">Portfolio</a></li>
 	    <li><a href="web-services.html" title="Services">Services</a></li>
-        <li><a href="photography.html" title="Photography">Photography</a></li>
+        <li><a href="photography.html" title="Photography">Photography &amp; Design</a></li>
         <!--<li><a href="blog/index.html" title="Blog">Blog</a></li>-->
         <li><a id="active-item" href="contact.php" title="Contact">Contact</a></li>
     </ul>
