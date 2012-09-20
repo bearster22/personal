@@ -5,6 +5,12 @@
 @import "../webfonts/ss-standard.css";
 
 @import "../webfonts/Chunkfive.css";
+
+@import "../fancybox/jquery.fancybox.css";
+
+@import "../fancybox/jquery.fancybox-buttoms.css";
+
+@import "../fancybox/jquery.fancybox-thumbs.css";
 body {
   width: 100%;
   *zoom: 1;
@@ -80,6 +86,7 @@ a:hover {
 }
 a:visited {
   color: #579eab;
+  text-decoration: none;
 }
 /*******************************/
 /* HEADER */
@@ -123,10 +130,10 @@ header div a,
 header div a:hover,
 header div a:visited {
   text-decoration: none;
-  font-size: 10rem;
+  font-size: 9rem;
   line-height: 30rem;
   letter-spacing: -0.2rem;
-  padding: 5.5rem 4rem 4.5rem;
+  padding: 4.5rem 3rem 3.5rem;
   color: #ea1e32;
   background: #fff;
   border-radius: 50%;
@@ -143,7 +150,7 @@ nav {
   height: 4.8rem;
   background: #555555;
   font-weight: 700;
-  box-shadow: inset 0.3rem 0px 3rem #444444, inset -0.3rem 0px 3rem #444444;
+  box-shadow: inset 0 0.2rem 0.2rem #444444, inset 0 -0.2rem 0.2rem #444444;
 }
 nav ul li {
   display: inline;
@@ -163,9 +170,7 @@ nav ul li a:visited {
   color: #fff;
 }
 nav ul li a#active_item {
-  color: #ea1e32;
-  /* prepend arrow from symbolset? */
-
+  color: #fb2f43;
 }
 nav ul li a:hover {
   text-decoration: none;
@@ -182,17 +187,18 @@ article {
   margin-left: 9.374999999999998%;
   padding: 2.4rem 0rem;
 }
+article > h1 {
+  padding: 4.8rem 0rem 2.4rem;
+}
 /*******************************/
 /* SECTION (USED IN PLACE OF DIVS FOR DISCRETE CONTENT BLOCKS */
 /*******************************/
 section {
   padding: 2.4rem 0;
 }
-section#home_nav h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #579eab;
+section#home_nav {
+  /* large hover buttons on homepage */
+
 }
 section#home_nav div {
   display: inline;
@@ -201,17 +207,56 @@ section#home_nav div {
   margin: 0 1.0416666666666665%;
   text-align: center;
 }
+section#home_nav div a {
+  padding: 4.8rem 0;
+  display: block;
+  color: #79c0cd;
+  font-size: 7.2rem;
+}
+section#home_nav div a:hover {
+  text-decoration: none;
+  color: #ea1e32;
+}
+section#home_nav div a:hover h1 {
+  color: #ea1e32;
+}
+section#home_nav div a:hover p {
+  color: #666666;
+}
+section#home_nav div a h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 6rem;
+  color: #79c0cd;
+}
+section#home_nav div p {
+  color: #555555;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
 section#flickr {
   display: inline;
   float: left;
   width: 64.58333333333334%;
   margin: 0 1.0416666666666665%;
+  /* photography and design column */
+}
+section#flickr img {
+  padding: 1.4rem 0 1rem;
 }
 section#instagram {
   display: inline;
   float: left;
   width: 31.25%;
   margin: 0 1.0416666666666665%;
+  border-radius: 1rem;
+  background: #eeeeee;
+}
+section#instagram h2 {
+  text-align: center;
+  color: #ea1e32;
+  font-size: 1.8rem;
 }
 section.portfolio {
   display: block;
@@ -233,6 +278,9 @@ section.portfolio img {
   width: 31.25%;
   margin: 0 1.0416666666666665%;
   padding-top: 1.6rem;
+  width: auto;
+  /* "width: auto" prevents img from stretching */
+
 }
 section.portfolio div {
   display: inline;
@@ -245,12 +293,14 @@ section.service {
   float: left;
   width: 47.91666666666667%;
   margin: 0 1.0416666666666665%;
+  /* services columns */
+
   padding: 3.4rem 0rem 1rem;
 }
 section.service div {
   float: left;
   text-align: center;
-  color: #8ad1de;
+  color: #79c0cd;
   font-size: 8rem;
   padding: 4rem 2rem 0rem 0rem;
   width: 12rem;
@@ -258,7 +308,7 @@ section.service div {
 section.service div h2 {
   font-size: 2.4rem;
   line-height: 6rem;
-  color: #8ad1de;
+  color: #79c0cd;
 }
 /*******************************/
 /* FOOTER */
@@ -271,7 +321,7 @@ footer {
   line-height: 1.6rem;
   padding: 4.8rem 0;
   color: #fff;
-  box-shadow: inset 0.3rem 0px 3rem #444444;
+  box-shadow: inset 0 0.2rem 0.2rem #444444;
 }
 footer div#copyright {
   display: inline;
@@ -365,14 +415,17 @@ aside {
   text-align: center;
   border-top: 1px dotted #cccccc;
   border-bottom: 1px dotted #cccccc;
-  padding: 2.4rem 4.8rem 4.8rem 4.8rem;
+  padding: 1.4rem 4.8rem 1rem;
+  margin-bottom: .4rem;
 }
 aside h1 {
   font-family: 'Open Sans', sans-serif;
   font-size: 2rem;
   line-height: 2.4rem;
-  padding: 2rem 0 .4rem 0;
+  padding: 1.4rem 0 1rem 0;
 }
 aside p {
   font-size: 1.3rem;
+  line-height: 2rem;
+  padding-bottom: 2.4rem;
 }

@@ -36,8 +36,12 @@
 	
 	<!-- SARAH BARROW -->
    	<section class="portfolio">
-    	<img src="img/Hamline-MBA-300.png" alt="Hamline MBA redesign" height="200" width="300">
-		<div>
+    	<a href="img/sb-ux-home.png" class="fancybox" rel="SB"><img src="img/Hamline-MBA-300.png" alt="Hamline MBA redesign" height="200" width="300"></a>
+		<!-- hidden fancybox slideshow items -->
+        <a href="img/sb-ux-portfolio.png" class="fancybox" rel="SB"></a>
+        <a href="img/sb-ux-services.png" class="fancybox" rel="SB"></a>
+        <a href="img/sb-ux-photography.png" class="fancybox" rel="SB"></a>
+        <div>
         	<h2>Sarah Barrow Web Design LLC</h2>
         	<p>info about current iteration: HTML5, CSS3, responsive, semantic grid layout, web fonts.</p>
     	</div>
@@ -49,7 +53,14 @@
    
     <!-- HAMLINE REDESIGN -->
     <section class="portfolio">
-		<img src="img/Hamline-home-new-300.png" alt="Hamline University redesign" height="200" width="300">
+		<a href="img/hamline-home.png" class="fancybox" rel="HU"><img src="img/Hamline-home-new-300.png" alt="Hamline University redesign" height="200" width="300"></a>
+        <!-- hidden fancybox slideshow items -->
+        <a href="img/hamline-nav.png" class="fancybox" rel="HU"></a>
+        <a href="img/hamline-login.png" class="fancybox" rel="HU"></a>
+        <a href="img/current-students.png" class="fancybox" rel="HU"></a>
+        <a href="img/virtual-tour.png" class="fancybox" rel="HU"></a>
+        <a href="img/news-events.png" class="fancybox" rel="HU"></a>
+        <a href="img/hamline-old.png" class="fancybox" rel="HU"></a>
         <div>
         	<h2>Hamline University</h2>
         	<p>Our team strategized and implemented a complete overhaul: usability, design, structure, content, strategy. Design firm Azul 7 created the overall design and a handful of templates. I led the front-end, user experience, information architecture, branding, design, and content strategy elements. Redesigned homepage and persistent navigation drive 243% more traffic to revenue-generating pages. SEO best practices were implemented, drastically improving internal and external search results. Final site is friendly, inviting, and engaging, earning a B+ from <a href="http://educheckup.com/2011/06/20/hamline-university-episode-252/" title="EDUCheckup Episode #252: Hamline University" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'EDUcheckup']);">EDUcheckup</a> with scores of 93 and 94 for design and content.</p>
@@ -58,7 +69,12 @@
         
 	<!-- MBA REDESIGN -->
     <section class="portfolio">
-    	<img src="img/Hamline-MBA-300.png" alt="Hamline MBA redesign" height="200" width="300">
+    	<a href="img/mba-home.png" class="fancybox" rel="MBA"><img src="img/Hamline-MBA-300.png" alt="Hamline MBA redesign" height="200" width="300"></a>
+        <!-- hidden fancybox slideshow images -->
+        <a href="img/mba-tuition.png" class="fancybox" rel="MBA"></a>
+        <a href="img/mba-curriculum.png" class="fancybox" rel="MBA"></a>
+        <a href="img/mba-apply.png" class="fancybox" rel="MBA"></a>
+        <a href="img/mba-landing.png" class="fancybox" rel="MBA"></a>
         <div>
  	       <h2>School of Business MBA</h2>
     	   <p>I designed and implemented a major redesign of the MBA site's navigation and content. Conceptualized and strategized an MBA-specific left menu, with sections for degree info, tuition and financial aid, and admission. Swapped the old text-heavy  template with a rotating banner template, creating more high-profile opportunities to market specific elements of the program. Highlighted content on the homepage that appeared frequently in internal search data: tuition, assistantships, program schedule. Incorporated  graduate testimonials and embedded videos of former students and faculty talking about the benefits of the program.</p>
@@ -66,17 +82,19 @@
 	</section>
     
     <!-- UG ADMISSION -->
-    <section class="portfolio">
+    <!-- <section class="portfolio">
     	<img src="img/Hamline-MBA-300.png" alt="Hamline MBA redesign" height="200" width="300">
         <div>
         	<h2>Undergraduate Admission</h2>
 			<p>Info about 2009 redesign</p>
         </div>
-    </section>
+    </section> -->
     
     <!-- IMAGING IOWA -->
     <section class="portfolio">
-    	<img src="img/imaging-iowa-300.png" alt="Imaging Iowa" height="200" width="300">
+    	<a href="img/imaging-iowa.png" class="fancybox" rel="Iowa"><img src="img/imaging-iowa-300.png" alt="Imaging Iowa" height="200" width="300"></a>
+        <!-- hidden fancybox slideshow images -->
+        <a href="img/imaging-iowa-ag.png" class="fancybox" rel="Iowa"></a>
         <div>
         	<h2>Imaging Iowa</h2>
 			<p>My graduate documentary class needed a web presence to share articles on biofuels and alternative energy in Iowa. I volunteered to lead the creation, design, and installation of <a href="http://www.imagingiowa.org" title="Imaging Iowa" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'Imaging-Iowa']);">Imaging Iowa</a>, our class website. Iinstalled WordPress as a content management system, so individuals could post their own articles and photos. I made significant customizations to a prebuilt theme to brand our mission and identity appropriately.</p>
@@ -113,7 +131,66 @@
 
          	
 <!-- JAVASCRIPT -->
-<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+<script src="fancybox/jquery.fancybox.js" type="text/javascript"></script>
+<script src="fancybox/jquery.fancybox-buttons.js" type="text/javascript"></script>
+<script src="fancybox/jquery.fancybox-thumbs.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		$(".fancybox").fancybox( {
+			// Opening fancyBox
+			openEffect  : 'fade',
+			openSpeed   : 300,
+			openEasing  : 'swing',
+			openOpacity : true,
+			openMethod  : 'zoomIn',
+
+			// Closing fancyBox
+			closeEffect  : 'fade',
+			closeSpeed   : 300,
+			closeEasing  : 'swing',
+			closeOpacity : true,
+			closeMethod  : 'zoomOut',
+
+			// Changing next gallery item
+			nextEffect : 'fade',
+			nextSpeed  : 300,
+			nextEasing : 'swing',
+			nextMethod : 'changeIn',
+
+			// Changing previous gallery item
+			prevEffect : 'fade',
+			prevSpeed  : 300,
+			prevEasing : 'swing',
+			prevMethod : 'changeOut',
+			
+			padding	:	0,
+			
+			preload	: 10,
+			
+			loop	:	false,
+			
+			helpers:	{
+							overlay: 
+							{	closeClick	:	true,
+								showEarly	:	false
+							},
+							
+							title:
+							{	type	:	'over'
+							}
+						
+						}
+		
+		});
+		
+	});
+	
+</script>
+
+
+
   
 <!-- GOOGLE ANALYTICS -->
 	<script type="text/javascript">
