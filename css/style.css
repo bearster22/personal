@@ -7,10 +7,6 @@
 @import "../webfonts/Chunkfive.css";
 
 @import "../fancybox/jquery.fancybox.css";
-
-@import "../fancybox/jquery.fancybox-buttoms.css";
-
-@import "../fancybox/jquery.fancybox-thumbs.css";
 body {
   width: 100%;
   *zoom: 1;
@@ -67,7 +63,7 @@ h2 {
   font-size: 2.4rem;
   line-height: 2.4rem;
   padding: 1.8rem 0 .6rem 0;
-  color: #579eab;
+  color: #ea1e32;
 }
 h3 {
   font-family: 'Open Sans', sans-serif;
@@ -85,8 +81,23 @@ a:hover {
   text-decoration: underline;
 }
 a:visited {
-  color: #579eab;
+  color: #ea1e32;
   text-decoration: none;
+}
+strong {
+  color: #555555;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+}
+em {
+  color: #555555;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-style: italic;
+  font-weight: 300;
 }
 /*******************************/
 /* HEADER */
@@ -210,7 +221,7 @@ section#home_nav div {
 section#home_nav div a {
   padding: 4.8rem 0;
   display: block;
-  color: #79c0cd;
+  color: #579eab;
   font-size: 7.2rem;
 }
 section#home_nav div a:hover {
@@ -221,42 +232,19 @@ section#home_nav div a:hover h1 {
   color: #ea1e32;
 }
 section#home_nav div a:hover p {
-  color: #666666;
+  color: #555555;
 }
 section#home_nav div a h1 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 6rem;
-  color: #79c0cd;
+  color: #579eab;
 }
 section#home_nav div p {
   color: #555555;
   font-size: 1.3rem;
-  line-height: 2rem;
-}
-section#flickr {
-  display: inline;
-  float: left;
-  width: 64.58333333333334%;
-  margin: 0 1.0416666666666665%;
-  /* photography and design column */
-}
-section#flickr img {
-  padding: 1.4rem 0 1rem;
-}
-section#instagram {
-  display: inline;
-  float: left;
-  width: 31.25%;
-  margin: 0 1.0416666666666665%;
-  border-radius: 1rem;
-  background: #eeeeee;
-}
-section#instagram h2 {
-  text-align: center;
-  color: #ea1e32;
-  font-size: 1.8rem;
+  line-height: 1.6rem;
 }
 section.portfolio {
   display: block;
@@ -279,14 +267,48 @@ section.portfolio img {
   margin: 0 1.0416666666666665%;
   padding-top: 1.6rem;
   width: auto;
-  /* "width: auto" prevents img from stretching */
-
 }
 section.portfolio div {
   display: inline;
   float: left;
   width: 64.58333333333334%;
   margin: 0 1.0416666666666665%;
+}
+section.portfolio div p.items {
+  color: #579eab;
+}
+section.portfolio div p.items span {
+  padding-right: .5rem;
+}
+section#photography {
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
+  /* photography and design columns */
+
+  text-align: center;
+}
+section#photography img {
+  padding: 1rem 0 1.4rem;
+}
+section#photography p {
+  text-align: justify;
+  padding: 1rem 1rem 1rem 0rem;
+}
+section#design {
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
+  text-align: center;
+}
+section#design img {
+  padding: 1rem 0 1.4rem;
+}
+section#design p {
+  text-align: justify;
+  padding: 1rem 0rem 1rem 1rem;
 }
 section.service {
   display: inline;
@@ -295,20 +317,26 @@ section.service {
   margin: 0 1.0416666666666665%;
   /* services columns */
 
-  padding: 3.4rem 0rem 1rem;
+  padding: 2.4rem 0 0 0;
 }
 section.service div {
-  float: left;
-  text-align: center;
-  color: #79c0cd;
-  font-size: 8rem;
-  padding: 4rem 2rem 0rem 0rem;
   width: 12rem;
+  float: left;
+  color: #79c0cd;
+  font-size: 7.2rem;
+  text-align: center;
+  padding: 3.4rem 1rem 0rem 0rem;
 }
 section.service div h2 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 6rem;
   color: #79c0cd;
+  text-align: center;
+  padding-bottom: 2.4rem;
+}
+section.service p {
+  text-align: justify;
+  padding-bottom: 2.4rem;
 }
 /*******************************/
 /* FOOTER */
@@ -415,8 +443,8 @@ aside {
   text-align: center;
   border-top: 1px dotted #cccccc;
   border-bottom: 1px dotted #cccccc;
-  padding: 1.4rem 4.8rem 1rem;
-  margin-bottom: .4rem;
+  padding: 1.4rem 0 1rem;
+  margin-bottom: 2.4rem;
 }
 aside h1 {
   font-family: 'Open Sans', sans-serif;
@@ -428,4 +456,41 @@ aside p {
   font-size: 1.3rem;
   line-height: 2rem;
   padding-bottom: 2.4rem;
+}
+aside#instagram {
+  padding: 2.4rem 0;
+  height: 15rem;
+  overflow: hidden;
+  border: none;
+}
+aside#instagram p {
+  font-size: 1.6rem;
+  padding: 1.8rem 0 .6rem 0;
+}
+aside#instagram ul {
+  margin: 0;
+  padding: 0;
+}
+aside#instagram li {
+  float: left;
+  padding: 1rem 0 2rem 2rem;
+}
+aside.details {
+  text-align: left;
+  border: none;
+  color: #579eab;
+  word-spacing: 1.6rem;
+  padding: 0;
+  margin: 0;
+}
+aside.details span {
+  padding-right: .5rem;
+}
+aside.details p {
+  color: #555555;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  word-spacing: normal;
+  padding: 0;
 }

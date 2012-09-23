@@ -7,8 +7,6 @@
 @import "../webfonts/ss-standard.css";
 @import "../webfonts/Chunkfive.css";
 @import "../fancybox/jquery.fancybox.css";
-@import "../fancybox/jquery.fancybox-buttoms.css";
-@import "../fancybox/jquery.fancybox-thumbs.css";
 @import "grid.less";
 
 
@@ -129,7 +127,7 @@ h2		{	font-family: 'Open Sans', sans-serif;
 			font-size: 2.4rem;
 			line-height: 2.4rem;			
 			padding: 1.8rem 0 .6rem 0;	
-			color: @aqua-dark;						
+			color: @flame;						
 		}
 		
 h3		{	font-family: 'Open Sans', sans-serif;
@@ -141,14 +139,22 @@ h3		{	font-family: 'Open Sans', sans-serif;
 		}
 		
 a		{	.link;
-			&:hover	{	text-decoration: underline;
-					}
-			&:visited	{	color: @aqua-dark;
+			&:hover		{	text-decoration: underline;
+						}
+			&:visited	{	color: @flame;
 							text-decoration: none;
 						}
 		}
 			
+strong	{	.text;
+			font-weight: 700;
+		}
 		
+em		{	.text;
+			font-style: italic;
+			font-weight: 300;
+		}
+				
 
 
 
@@ -240,67 +246,79 @@ section	{	padding: 2.4rem 0;
 									text-align: center;
 									a	{	padding: 4.8rem 0;
 											display: block;
-											color: @aqua - #111;
+											color: @aqua-dark;
 											font-size: 7.2rem;
 											&:hover	{	text-decoration: none;
 														color: @flame;
 														h1	{	color: @flame;
 															}
-														p	{	color: @dark + #111;
+														p	{	color: @dark;
 															}
 													}
 											h1	{	font-family: 'Open Sans', sans-serif;			
 													font-weight: 700;
 													font-size: 2.4rem;
 													line-height: 6rem;
-													color: @aqua - #111;
+													color: @aqua-dark;
 												}
 										}
 									p	{	color: @dark;
 											font-size: 1.3rem;
-											line-height: 2rem;
+											line-height: 1.6rem;
 										}	
 								}
 						}
 			
-			&#flickr	{	.column(8);													/* photography and design column */   // img for default screen size = 600?
-							img	{	padding: 1.4rem 0 1rem;
-								}													
-						}
-			
-			
-			&#instagram	{	.column(4);	
-							border-radius: @radius;
-							background: @gray + #222;
-							h2	{	text-align: center;
-									color: @flame;
-									font-size: 1.8rem;
-								}
-							
-						}
-			
 			&.portfolio	{	.row(12);
-							img	{	.column(4,12);										// img for default screen size = 300px
+							img	{	.column(4,12);										
 									padding-top: 1.6rem;
-									width: auto;										/* "width: auto" prevents img from stretching */
+									width: auto;										
 								}
 							div	{	.column(8,12);
+									p.items		{	color: @aqua-dark;
+													span	{	padding-right: .5rem;
+															}
+												}
 								}
+						}
+			
+			&#photography	{	.column(6);													/* photography and design columns */
+								text-align: center;
+								img	{	padding: 1rem 0 1.4rem;
+									}
+								p	{	text-align: justify;
+										padding: 1rem 1rem 1rem 0rem;
+									}													
+							}
+							
+			&#design	{	.column(6);
+							text-align: center;
+								img	{	padding: 1rem 0 1.4rem;
+									}
+								p	{	text-align: justify;
+										padding: 1rem 0rem 1rem 1rem;
+									}	
 						}
 			
 			&.service	{	.column(6);													/* services columns */
-							padding: 3.4rem 0rem 1rem;
-							div	{	float: left;
-									text-align: center;
+							padding: 2.4rem 0 0 0;
+							div	{	width: 12rem;
+									float: left;
 									color: @aqua - #111;
-									font-size: 8rem;
-									padding: 4rem 2rem 0rem 0rem;
-									width: 12rem;
-									h2	{	font-size: 2.4rem;
+									font-size: 7.2rem;
+									text-align: center;
+									padding: 3.4rem 1rem 0rem 0rem;
+									h2	{	font-size: 2rem;
 											line-height: 6rem;
 											color: @aqua - #111;
+											text-align: center;
+											padding-bottom: 2.4rem;
 										}
-								} 	
+								} 
+							p	{	text-align: justify;
+									padding-bottom: 2.4rem;
+									
+								}
 						}
 		}				
 		
@@ -377,15 +395,44 @@ aside	{	clear: both;
 			text-align: center;
 			border-top: 1px dotted @gray;
 			border-bottom: 1px dotted @gray;
-			padding: 1.4rem 4.8rem 1rem;
-			margin-bottom: .4rem;
-			& h1	{	font-family: 'Open Sans', sans-serif;
+			padding: 1.4rem 0 1rem;
+			margin-bottom: 2.4rem;
+			h1	{	font-family: 'Open Sans', sans-serif;
 						font-size: 2rem;
 						line-height: 2.4rem;
 						padding: 1.4rem 0 1rem 0;
 					}
-			& p		{	font-size: 1.3rem;
+			p		{	font-size: 1.3rem;
 						line-height: 2rem;
 						padding-bottom: 2.4rem;
 					}
+					
+			&#instagram	{	padding: 2.4rem 0;
+							height: 15rem;
+							overflow: hidden;							
+							border: none;
+							p	{	font-size: 1.6rem;
+									padding: 1.8rem 0 .6rem 0;
+								}
+							ul	{	margin: 0;
+									padding: 0;
+								}
+							li	{	float: left;
+									padding: 1rem 0 2rem 2rem;
+								}	
+						}
+			&.details	{	text-align: left;
+							border: none;
+							color: @aqua-dark;
+							word-spacing: 1.6rem;
+							padding: 0;
+							margin: 0;
+							span	{	padding-right: .5rem;
+									}
+							p		{	.text;
+										word-spacing: normal;
+										padding: 0;
+									}
+						}
+			
 		}

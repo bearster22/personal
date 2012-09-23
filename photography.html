@@ -32,18 +32,24 @@
     
 <article>    
 	<h1>Photography, art, and design</h1>
-    <p>Need better paragraph here talking about capabilities, not couching as amateur.</p>
-    <section id="flickr">
+    <section id="photography">
+    	<a href="http://www.flickr.com/photos/sarahbarrow/sets/72157631574830832/show/" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'flickr-photos']);" target="_blank" title="View photography Flickr feed"><img src="img/bangkok-400.jpg" height="250" width="400" alt="Bangkok sunrise"></a>
     	<h2>Photography</h2>
-        <a href="http://www.flickr.com/photos/sarahbarrow/sets/72157631574830832/show/" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'flickr-photos']);" target="_blank" title="View photography Flickr feed"><img src="img/bangkok-600.jpg" alt="Bangkok sunrise"></a>
+        <p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</p>
+        
+	</section>
+    <section id="design">
+    	<a href="http://www.flickr.com/photos/sarahbarrow/sets/72157629901463439/show/" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'flickr-design']);" target="_blank" title="View art and design Flickr feed"><img src="img/wedding-400.png" height="250" width="400" alt="Email header design"></a>
     	<h2>Art and Design</h2>
-        <a href="http://www.flickr.com/photos/sarahbarrow/sets/72157629901463439/show/" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'flickr-design']);" target="_blank" title="View art and design Flickr feed"><img src="img/shark-600.png" alt="Flaming shark illustration"></a>
+        <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.</p>
+        
     </section>
-    <section id="instagram">
-    	<h2>Instagram</h2>
-    	<!-- insert instagram feed here -->
-    </section>    
 </article>
+
+<aside id="instagram">
+    	<p><em>Latest on Instagram:</em></p>
+    	<ul id="slideshow"></ul>
+    </aside>    
     
 <footer>
 	<div id="copyright">&copy; Sarah Barrow Web Design<br />
@@ -74,6 +80,49 @@
          	
 <!-- JAVASCRIPT -->
 <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+<script src="fancybox/jquery.fancybox.js" type="text/javascript"></script>
+<script src="js/jquery-embedagram.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+            $('#slideshow').embedagram({
+                    instagram_id	:	50110933,
+					link_type		:	'img',
+					limit			:	50,
+					success			: 	function (){ 
+										$('#slideshow a').attr('rel', 'instagram-gallery'),			// adds same rel to create gallery
+										$('#slideshow a').fancybox({								// calls fancybox plugin
+											loop: false,
+											nextClick: true,
+											// Opening fancyBox
+			openEffect  : 'fade',
+			openSpeed   : 300,
+			openEasing  : 'swing',
+			openOpacity : true,
+			openMethod  : 'zoomIn',
+
+			// Closing fancyBox
+			closeEffect  : 'fade',
+			closeSpeed   : 300,
+			closeEasing  : 'swing',
+			closeOpacity : true,
+			closeMethod  : 'zoomOut',
+
+			// Changing next gallery item
+			nextEffect : 'fade',
+			nextSpeed  : 300,
+			nextEasing : 'swing',
+			nextMethod : 'changeIn',
+
+			// Changing previous gallery item
+			prevEffect : 'fade',
+			prevSpeed  : 300,
+			prevEasing : 'swing',
+			prevMethod : 'changeOut',
+											})													  
+										}		
+            });
+    });
+</script>
 
 
   

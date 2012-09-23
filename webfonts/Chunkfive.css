@@ -11,6 +11,8 @@
          url('Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
     font-weight: normal;
     font-style: normal;
+	text-rendering: optimizeLegibility;
+
 
 }
 
