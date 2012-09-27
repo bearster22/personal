@@ -358,6 +358,111 @@ section	{	padding: 2.4rem 0;
 							p	{	padding-bottom: 2.4rem;
 								}
 						}
+			
+			/* contact form */			
+			&#contact	{	.column(6);
+							.push(3);
+							input, select, label, textarea	{	font-size: 1.6rem;
+															}	
+							input, select, textarea	{	display: block;
+														width: 100%;
+														border: 1px solid @gray;
+														padding: .8rem 1rem;
+														border-radius: 1rem;
+														background: @gray + #222;
+													}	
+							input:focus, 
+							select:focus, 
+							textarea:focus	{	border: 1px solid @aqua;
+												background-color: #fff;
+											}
+							textarea		{	height: 20rem;
+												resize: none;
+												margin-bottom: 4.8rem;
+											}
+							label			{	display: block;
+												margin: 2rem 0 .4rem;
+											}
+							.required		{	font-weight: 700;
+												color: @flame;
+											}
+							#submit-button	{	color: #fff;
+												font-size: 2.4rem;
+												padding: 2.4rem 0;
+												margin-bottom: 2.4rem;
+												font-weight: 700;
+												background: @lime;
+												border: none;
+												border-radius: @radius;
+												.tab(@lime - #111);
+												&:hover	{	text-decoration: none;
+															.gradient(@lime, @lime + #111);
+															.text-shadow(@lime);
+														}
+												/* insert :active here */
+											}
+							#loading	{	width: 32px;
+											height: 32px;
+											background-image: url(../img/loading.gif);
+											display: block;
+											margin: 0 23rem 4.8rem;
+											display: none;
+										}
+							#errors	{	color: @flame;
+										padding: 1rem 0 1rem 5rem;
+										margin: 2.4rem 0;
+										display: block;
+										width: 48rem;
+										border-radius: 1rem;
+										background: url(../img/cancel_48.png) no-repeat left center;
+										display: none;
+										li	{	padding: 2px;
+												list-style: none;
+												#info	{	font-weight: 700;
+														}
+												#info:before	{	content: '';
+																}
+											}
+									}
+							#success	{	color: @aqua-dark;
+											padding: 1rem 0 1rem 5rem;
+											margin: 2.4rem 0;
+											display: block;
+											width: 48rem;
+											border-radius: 1rem;
+											background: url(../img/accepted_48.png) no-repeat left center;
+											font-weight: 700;
+											display: none;
+										}
+							#errors.visible,
+							#success.visible	{	display: block;
+												}
+							#req-field-desc		{	font-style: italic;
+												}
+							
+							/* Remove box shadow firefox, chrome and opera put around required fields. */  
+							input:required, 
+							textarea:required	{	-moz-box-shadow: none;  
+    												-webkit-box-shadow: none;  
+    												-o-box-shadow: none;  
+  													box-shadow: none;  
+												}  
+							/* Normalize placeholder styles */  
+							/* chrome, safari */  
+							::-webkit-input-placeholder	{	color: @gray - #222;  
+															font-family: 'Open Sans', sans-serif;
+														}  
+							/* mozilla */  
+							input:-moz-placeholder, 
+							textarea:-moz-placeholder	{	color: @gray - #222;  
+															font-family: 'Open Sans', sans-serif;
+														}  
+							/* ie (faux placeholder) */  
+							input.placeholder-text, 
+							textarea.placeholder-text	{	color: @gray - #222;  
+															font-family: 'Open Sans', sans-serif;
+														}  				
+						}	
 		}				
 		
 		

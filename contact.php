@@ -1,8 +1,10 @@
+<?php session_start() ?>  
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Hire Me: Sarah Barrow Web Design</title>
+<title>Contact Me: Sarah Barrow Web Design</title>
 <meta name="description" content="Sarah Barrow is a creative, strategic web professional specializing in website design and development." />  
 
 <!-- STYLES ETC -->
@@ -32,15 +34,64 @@
 </nav>
     
 <article>    
+	<hgroup>
+    	<h1>Contact Me!</h1>
+        <h2>Fill out my contact form below to chat about your project...</h2>
+    </hgroup>
     
-<section>insert form here</section>    
+	<section id="contact">
+         
+		<?php  
+    	//init variables  
+   			$cf = array();  
+   			$sr = false;  
+    		if(isset($_SESSION['cf_returndata'])){  
+        		$cf = $_SESSION['cf_returndata'];  
+        		$sr = true;  
+    			}  
+    	?>  
+        
+        <ul id="errors" class="<?php echo ($sr && !$cf['form_ok']) ? 'visible' : ''; ?>">  
+        	<li id="info">There were some problems with your form submission:</li>  
+        	<?php  
+        		if(isset($cf['errors']) && count($cf['errors']) > 0) :  
+            	foreach($cf['errors'] as $error) :  
+        	?>  
+        	<li><?php echo $error ?></li>  
+        	<?php  
+            	endforeach;  
+        		endif;  
+        	?>  
+    	</ul>  
+    	<p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for your message! We will get back to you ASAP!</p>  
+    
+            <form method="post" action="process.php">
+            	<label for="name">Name: <span class="required">*</span></label>
+                <input type="text" id="name" name="name" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['name'] : '' ?>" placeholder="John Doe" required="required" autofocus="autofocus" /><br />
+                <label for="email">Email Address: <span class="required">*</span></label>
+                <input type="email" id="email" name="email" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['email'] : '' ?>" placeholder="johndoe@email.com" required="required" /><br />
+             	<label for="phone">Phone: </label>
+                <input type="tel" id="phone" name="phone" value=value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['phone'] : '' ?>" /><br />
+                <label for="website">Website: </label>
+                <input type="url" id="website" name="website" value=value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['website'] : '' ?>" /><br />
+                <label for="message">Message: <span class="required">*</span></label>
+                <textarea id="message" name="message" placeholder="What can I help you with?" required="required"><?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['message'] : '' ?></textarea>
+                <span id="loading"></span>
+                <input type="submit" value"Send away!" id="submit-button" />
+                <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>
+             </form>   
+    <!-- unsetting session -->
+    <?php unset($_SESSION['cf_returndata']); ?> 
+    
+    <p><strong>Having trouble with the form?</strong> Email me directly at sarah[dot]barrow[at]gmail[dot]com.</p>
+	</section>
     
 </article>
     
 <footer>
 	<div id="copyright">&copy; Sarah Barrow Web Design<br />
     	All rights reserved</div>
-    <div id="contact"><a href="contact.php" title="Hire me!"><span id="button_large">Hire Me</span><br /><span id="button_small">to get started!</span></a></div>
+    <div id="contact"><a id="invisible" href="contact.php" title="Hire me!"><span id="button_large">Hire Me</span><br /><span id="button_small">to get started!</span></a></div>
     <div id="social">
     	<ul>
         	<li>
@@ -67,7 +118,9 @@
          	
 <!-- JAVASCRIPT -->
 <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+<script src="js/script.js"></script>
 
+    
   
 <!-- GOOGLE ANALYTICS -->
 	<script type="text/javascript">
