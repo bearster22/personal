@@ -191,25 +191,70 @@ nav ul li a:hover {
 /* ARTICLE (USED AS WRAPPER ON ALL PAGES */
 /*******************************/
 article {
-  display: inline;
-  float: left;
-  width: 81.25%;
-  margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
   padding: 2.4rem 0rem;
 }
 article > h1 {
   padding: 4.8rem 0rem 2.4rem;
+}
+article hgroup {
+  text-align: center;
+  padding-bottom: 2.4rem;
+}
+article hgroup h1 {
+  padding: 4.8rem 0rem 0rem;
+}
+article hgroup h2 {
+  color: #555555;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  padding: 1rem 0 1.4rem;
+  font-weight: normal;
 }
 /*******************************/
 /* SECTION (USED IN PLACE OF DIVS FOR DISCRETE CONTENT BLOCKS */
 /*******************************/
 section {
   padding: 2.4rem 0;
+  /* intro para on homepage */
+
+  /* large hover buttons on homepage */
+  /* portfolio items */
+
+  /* photography column */
+
+  /* design column */
+  /* services columns */
+
+  /* contact form */
+}
+section#intro div {
+  display: inline;
+  float: left;
+  width: 31.25%;
+  margin: 0 1.0416666666666665%;
+}
+section#intro div img {
+  float: right;
+}
+section#intro h2 {
+  display: inline;
+  float: left;
+  width: 56.25%;
+  margin: 0 1.0416666666666665%;
+  padding: 1.2rem 0 1.2rem 0;
+  color: #579eab;
+}
+section#intro p {
+  display: inline;
+  float: left;
+  width: 56.25%;
+  margin: 0 1.0416666666666665%;
+  padding-bottom: 2.4rem;
 }
 section#home_nav {
-  /* large hover buttons on homepage */
-
+  clear: both;
 }
 section#home_nav div {
   display: inline;
@@ -220,9 +265,9 @@ section#home_nav div {
 }
 section#home_nav div a {
   padding: 4.8rem 0;
-  display: block;
   color: #579eab;
-  font-size: 7.2rem;
+  font-size: 10rem;
+  display: block;
 }
 section#home_nav div a:hover {
   text-decoration: none;
@@ -238,8 +283,8 @@ section#home_nav div a h1 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 2.4rem;
-  line-height: 6rem;
   color: #579eab;
+  padding: 4rem 0 .8rem 0;
 }
 section#home_nav div p {
   color: #555555;
@@ -247,134 +292,157 @@ section#home_nav div p {
   line-height: 1.6rem;
 }
 section.portfolio {
-  display: block;
-  width: 102.08333333333333%;
-  margin: 0 -1.0416666666666665%;
-  *zoom: 1;
-}
-section.portfolio:before,
-section.portfolio:after {
-  content: "";
-  display: table;
-}
-section.portfolio:after {
   clear: both;
 }
-section.portfolio img {
+section.portfolio div.image {
   display: inline;
   float: left;
   width: 31.25%;
   margin: 0 1.0416666666666665%;
+}
+section.portfolio div.image a {
+  float: right;
   padding-top: 1.6rem;
-  width: auto;
+  padding-bottom: 4.8rem;
 }
-section.portfolio div {
+section.portfolio div.description {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 39.58333333333333%;
   margin: 0 1.0416666666666665%;
 }
-section.portfolio div p.items {
-  color: #579eab;
-}
-section.portfolio div p.items span {
-  padding-right: .5rem;
-}
-section#photography {
-  display: inline;
-  float: left;
-  width: 47.91666666666667%;
-  margin: 0 1.0416666666666665%;
-  /* photography and design columns */
-
-  text-align: center;
-}
-section#photography img {
-  padding: 1rem 0 1.4rem;
-}
-section#photography p {
-  text-align: justify;
-  padding: 1rem 1rem 1rem 0rem;
-}
-section#design {
-  display: inline;
-  float: left;
-  width: 47.91666666666667%;
-  margin: 0 1.0416666666666665%;
-  text-align: center;
-}
-section#design img {
-  padding: 1rem 0 1.4rem;
-}
-section#design p {
-  text-align: justify;
-  padding: 1rem 0rem 1rem 1rem;
-}
-section.service {
-  display: inline;
-  float: left;
-  width: 47.91666666666667%;
-  margin: 0 1.0416666666666665%;
-  /* services columns */
-
-  padding: 2.4rem 0 0 0;
-}
-section.service div {
-  width: 12rem;
-  float: left;
-  color: #79c0cd;
-  font-size: 7.2rem;
-  text-align: center;
-  padding: 3.4rem 1rem 0rem 0rem;
-}
-section.service div h2 {
-  font-size: 2rem;
-  line-height: 6rem;
-  color: #79c0cd;
-  text-align: center;
-  padding-bottom: 2.4rem;
-}
-section.service p {
-  text-align: justify;
-  padding-bottom: 2.4rem;
-}
-/*******************************/
-/* FOOTER */
-/*******************************/
-footer {
-  clear: both;
-  height: 12rem;
-  background-color: #555555;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  padding: 4.8rem 0;
-  color: #fff;
-  box-shadow: inset 0 0.2rem 0.2rem #444444;
-}
-footer div#copyright {
+section.portfolio aside.details {
   display: inline;
   float: left;
   width: 22.916666666666664%;
   margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
 }
-footer div#contact {
+section.portfolio aside.details h3 {
+  padding: 2.4rem 0 0rem 0;
+}
+section.portfolio aside.details a {
+  padding: 0;
+}
+section.portfolio aside.details div {
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  color: #579eab;
+}
+section.portfolio aside.details div span {
+  padding-right: 1rem;
+  padding-left: .4rem;
+}
+section#photography {
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 39.58333333333333%;
   margin: 0 1.0416666666666665%;
-  margin-left: 1.0416666666666665%;
+  margin-left: 9.374999999999998%;
   text-align: center;
 }
-footer div#contact a {
-  color: #fff;
-  display: block;
-  padding: 2.4rem 0 1.2rem 0;
-  background: #aeb627;
-  border-radius: 1rem;
-  box-shadow: inset 1px 1px 1px #e1e95a, inset -1px -1px 1px #8c9405, 3px 3px 3px #444444;
+section#photography p {
+  text-align: left;
 }
-footer div#contact a:hover {
+section#design {
+  display: inline;
+  float: left;
+  width: 39.58333333333333%;
+  margin: 0 1.0416666666666665%;
+  text-align: center;
+}
+section#design p {
+  text-align: left;
+}
+section.service {
+  display: inline;
+  float: left;
+  width: 39.58333333333333%;
+  margin: 0 1.0416666666666665%;
+  padding: 2.4rem 0 0 0;
+}
+section.service.indent {
+  margin-left: 9.374999999999998%;
+}
+section.service div {
+  width: 12rem;
+  float: left;
+  color: #579eab;
+  font-size: 7.2rem;
+  text-align: center;
+  padding: 3.4rem .5rem 0rem 0rem;
+}
+section.service div h2 {
+  font-size: 2rem;
+  line-height: 6rem;
+  color: #579eab;
+  text-align: center;
+  padding-bottom: 2.4rem;
+}
+section.service p {
+  padding-bottom: 2.4rem;
+}
+section#contact {
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 26.041666666666668%;
+  /* Remove box shadow firefox, chrome and opera put around required fields. */
+  /* Normalize placeholder styles */
+  /* chrome, safari */
+  /* mozilla */
+  /* ie (faux placeholder) */
+}
+section#contact input,
+section#contact select,
+section#contact label,
+section#contact textarea {
+  font-size: 1.6rem;
+}
+section#contact input,
+section#contact select,
+section#contact textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #cccccc;
+  padding: .8rem 1rem;
+  border-radius: 1rem;
+  background: #eeeeee;
+}
+section#contact input:focus,
+section#contact select:focus,
+section#contact textarea:focus {
+  border: 1px solid #8ad1de;
+  background-color: #fff;
+}
+section#contact textarea {
+  height: 20rem;
+  resize: none;
+  margin-bottom: 4.8rem;
+}
+section#contact label {
+  display: block;
+  margin: 2rem 0 .4rem;
+}
+section#contact .required {
+  font-weight: 700;
+  color: #ea1e32;
+}
+section#contact #submit-button {
+  color: #fff;
+  font-size: 2.4rem;
+  padding: 2.4rem 0;
+  margin-bottom: 2.4rem;
+  font-weight: 700;
+  background: #aeb627;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: inset 1px 1px 1px #d0d849, inset -1px -1px 1px #7b8300;
+  /* insert :active here */
+
+}
+section#contact #submit-button:hover {
   text-decoration: none;
   background: #aeb627;
   background: -moz-linear-gradient(top, #aeb627 0%, #bfc738 50%, #aeb627 100%);
@@ -400,68 +468,204 @@ footer div#contact a:hover {
 
   text-shadow: 1px 1px 1px #8c9405;
 }
-footer div#contact a #button_large {
+section#contact #loading {
+  width: 32px;
+  height: 32px;
+  background-image: url(../img/loading.gif);
+  display: block;
+  margin: 0 23rem 4.8rem;
+  display: none;
+}
+section#contact #errors {
+  color: #ea1e32;
+  padding: 1rem 0 1rem 5rem;
+  margin: 2.4rem 0;
+  display: block;
+  width: 48rem;
+  border-radius: 1rem;
+  background: url(../img/cancel_48.png) no-repeat left center;
+  display: none;
+}
+section#contact #errors li {
+  padding: 2px;
+  list-style: none;
+}
+section#contact #errors li #info {
+  font-weight: 700;
+}
+section#contact #errors li #info:before {
+  content: '';
+}
+section#contact #success {
+  color: #579eab;
+  padding: 1rem 0 1rem 5rem;
+  margin: 2.4rem 0;
+  display: block;
+  width: 48rem;
+  border-radius: 1rem;
+  background: url(../img/accepted_48.png) no-repeat left center;
+  font-weight: 700;
+  display: none;
+}
+section#contact #errors.visible,
+section#contact #success.visible {
+  display: block;
+}
+section#contact #req-field-desc {
+  font-style: italic;
+}
+section#contact input:required,
+section#contact textarea:required {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+section#contact ::-webkit-input-placeholder {
+  color: #aaaaaa;
+  font-family: 'Open Sans', sans-serif;
+}
+section#contact input:-moz-placeholder,
+section#contact textarea:-moz-placeholder {
+  color: #aaaaaa;
+  font-family: 'Open Sans', sans-serif;
+}
+section#contact input.placeholder-text,
+section#contact textarea.placeholder-text {
+  color: #aaaaaa;
+  font-family: 'Open Sans', sans-serif;
+}
+/*******************************/
+/* FOOTER */
+/*******************************/
+footer {
+  clear: both;
+  height: 12rem;
+  background-color: #555555;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding: 4.8rem 0;
+  color: #fff;
+  box-shadow: inset 0 0.2rem 0.2rem #444444;
+}
+footer #copyright {
+  display: inline;
+  float: left;
+  width: 22.916666666666664%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 9.374999999999998%;
+}
+footer #contact {
+  display: inline;
+  float: left;
+  width: 31.25%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 1.0416666666666665%;
+  text-align: center;
+}
+footer #contact a {
+  color: #fff;
+  display: block;
+  padding: 2.4rem 0 1.2rem 0;
+  background: #aeb627;
+  border-radius: 1rem;
+  box-shadow: inset 1px 1px 1px #e1e95a, inset -1px -1px 1px #8c9405, 3px 3px 3px #444444;
+  /* insert :active here */
+
+}
+footer #contact a:hover {
+  text-decoration: none;
+  background: #aeb627;
+  background: -moz-linear-gradient(top, #aeb627 0%, #bfc738 50%, #aeb627 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #aeb627), color-stop(50%, #bfc738), color-stop(100%, #aeb627));
+  /* Chrome, Safari4+ */
+
+  background: -webkit-linear-gradient(top, #aeb627 0%, #bfc738 50%, #aeb627 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #aeb627 0%, #bfc738 50%, #aeb627 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #aeb627 0%, #bfc738 50%, #aeb627 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #aeb627 0%, #bfc738 50%, #aeb627 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color', endColorstr='@color', GradientType=0);
+  /* IE6-9 */
+
+  text-shadow: 1px 1px 1px #8c9405;
+}
+footer #contact a #button_large {
   font-size: 2.4rem;
   font-weight: 700;
 }
-footer div#contact a #button_small {
+footer #contact a #button_small {
   line-height: 2.4rem;
 }
-footer div#social {
+footer #invisible {
+  visibility: hidden;
+}
+footer #social {
   display: inline;
   float: left;
   width: 22.916666666666664%;
   margin: 0 1.0416666666666665%;
   text-align: center;
 }
-footer div#social ul {
+footer #social ul {
   float: right;
 }
-footer div#social ul li {
+footer #social ul li {
   float: right;
   padding: 0rem 1rem;
 }
-footer div#social ul li div {
+footer #social ul li div {
   font-size: 2.4rem;
   line-height: 2.4rem;
 }
-footer div#social ul li a {
+footer #social ul li a {
   color: #fff;
 }
-footer div#social ul li a:visited {
+footer #social ul li a:visited {
   color: #ffffff;
 }
-footer div#social ul li a:hover {
+footer #social ul li a:hover {
   color: #fb2f43;
   text-decoration: none;
 }
 /*******************************/
 /* OTHER */
 /*******************************/
-aside {
+aside#affordable {
   clear: both;
   text-align: center;
   border-top: 1px dotted #cccccc;
   border-bottom: 1px dotted #cccccc;
-  padding: 1.4rem 0 1rem;
-  margin-bottom: 2.4rem;
+  padding: 1.4rem 7.2rem 1rem;
+  margin: 0 7.2rem 2.4rem;
 }
-aside h1 {
+aside#affordable h1 {
   font-family: 'Open Sans', sans-serif;
   font-size: 2rem;
   line-height: 2.4rem;
   padding: 1.4rem 0 1rem 0;
 }
-aside p {
+aside#affordable p {
   font-size: 1.3rem;
   line-height: 2rem;
   padding-bottom: 2.4rem;
 }
 aside#instagram {
+  clear: both;
+  text-align: center;
   padding: 2.4rem 0;
+  margin: 0 7.2rem 2.4rem;
   height: 15rem;
   overflow: hidden;
-  border: none;
 }
 aside#instagram p {
   font-size: 1.6rem;
@@ -473,24 +677,5 @@ aside#instagram ul {
 }
 aside#instagram li {
   float: left;
-  padding: 1rem 0 2rem 2rem;
-}
-aside.details {
-  text-align: left;
-  border: none;
-  color: #579eab;
-  word-spacing: 1.6rem;
-  padding: 0;
-  margin: 0;
-}
-aside.details span {
-  padding-right: .5rem;
-}
-aside.details p {
-  color: #555555;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  word-spacing: normal;
-  padding: 0;
+  padding: 2rem 0 2rem 3rem;
 }
