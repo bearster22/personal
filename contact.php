@@ -36,7 +36,7 @@
 <article>    
 	<hgroup>
     	<h1>Contact Me!</h1>
-        <h2>Fill out my contact form below to chat about your project...</h2>
+        <h2>Fill out my contact form below to chat about your project, even if you just have a question or are looking for a quote.</h2>
     </hgroup>
     
 	<section id="contact">

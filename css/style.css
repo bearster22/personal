@@ -325,6 +325,10 @@ nav ul li a#active_item {
 nav ul li a:hover {
   text-decoration: none;
   color: #ea1e32;
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  -o-transition: all 250ms;
+  transition: all 250ms;
 }
 /*******************************/
 /* ARTICLE (USED AS WRAPPER) */
@@ -385,6 +389,9 @@ section#intro p {
   margin: 0 1.0416666666666665%;
   padding-bottom: 2.4rem;
 }
+section#intro p:last-of-type {
+  padding-bottom: 4.8rem;
+}
 section#home_nav {
   /* large hover buttons on homepage */
 
@@ -406,6 +413,10 @@ section#home_nav div a {
 section#home_nav div a:hover {
   text-decoration: none;
   color: #ea1e32;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
 }
 section#home_nav div a:hover h1 {
   color: #ea1e32;
@@ -422,8 +433,29 @@ section#home_nav div a h1 {
 }
 section#home_nav div p {
   color: #555555;
-  font-size: 1.3rem;
-  line-height: 1.6rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  line-height: 2rem;
+  padding-bottom: 2.4rem;
+}
+section#about {
+  /* More about me on homepage */
+
+  display: none;
+}
+section#about h1 {
+  padding-bottom: 2.4rem;
+}
+section#about p {
+  display: inline;
+  float: left;
+  width: 39.58333333333333%;
+  margin: 0 1.0416666666666665%;
+  padding-bottom: 4.8rem;
+}
+section#about p:first-of-type {
+  margin-left: 9.374999999999998%;
 }
 section.portfolio {
   /* portfolio items */
@@ -447,6 +479,12 @@ section.portfolio div.description {
   width: 39.58333333333333%;
   margin: 0 1.0416666666666665%;
 }
+section.portfolio div.description p {
+  padding: .4rem 0 2rem 0;
+}
+section.portfolio div.description p:last-of-type {
+  padding-bottom: 4.8rem;
+}
 section.portfolio aside.details {
   display: inline;
   float: left;
@@ -460,14 +498,12 @@ section.portfolio aside.details a {
   padding: 0;
 }
 section.portfolio aside.details div {
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-count: 2;
   color: #579eab;
+  padding-bottom: 4.8rem;
 }
 section.portfolio aside.details div span {
-  padding-right: 1rem;
   padding-left: .4rem;
+  padding-right: 1rem;
 }
 section#photography {
   /* photography column */
@@ -478,6 +514,9 @@ section#photography {
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
   text-align: center;
+}
+section#photography h2 {
+  padding: 3rem 0 1.8rem;
 }
 section#photography p {
   text-align: left;
@@ -490,6 +529,9 @@ section#design {
   margin: 0 1.0416666666666665%;
   text-align: center;
 }
+section#design h2 {
+  padding: 3rem 0 1.8rem;
+}
 section#design p {
   text-align: left;
 }
@@ -500,7 +542,7 @@ section.service {
   float: left;
   width: 39.58333333333333%;
   margin: 0 1.0416666666666665%;
-  padding: 2.4rem 0 0 0;
+  padding: 2.4rem 0;
 }
 section.service.indent {
   margin-left: 9.374999999999998%;
@@ -511,7 +553,7 @@ section.service div {
   color: #579eab;
   font-size: 7.2rem;
   text-align: center;
-  padding: 3.4rem .5rem 0rem 0rem;
+  padding: 3.4rem .5rem 1.4rem 0rem;
 }
 section.service div h2 {
   font-size: 2rem;
@@ -522,6 +564,9 @@ section.service div h2 {
 }
 section.service p {
   padding-bottom: 2.4rem;
+}
+section.service:last-of-type {
+  padding-bottom: 4.8rem;
 }
 /*******************************/
 /* FOOTER */
@@ -561,6 +606,13 @@ footer #contact a {
   /* insert :active here */
 
 }
+footer #contact a #button_large {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+footer #contact a #button_small {
+  line-height: 2.4rem;
+}
 footer #contact a:hover {
   text-decoration: none;
   background: #aeb627;
@@ -586,13 +638,10 @@ footer #contact a:hover {
   /* IE6-9 */
 
   text-shadow: 1px 1px 1px #8c9405;
-}
-footer #contact a #button_large {
-  font-size: 2.4rem;
-  font-weight: 700;
-}
-footer #contact a #button_small {
-  line-height: 2.4rem;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
 }
 footer #invisible {
   /* hide the "contact me" button on the contact page */
@@ -636,7 +685,7 @@ aside#affordable {
   border-top: 1px dotted #cccccc;
   border-bottom: 1px dotted #cccccc;
   padding: 1.4rem 7.2rem 1rem;
-  margin: 0 7.2rem 2.4rem;
+  margin: 4.8rem 7.2rem;
 }
 aside#affordable h1 {
   font-family: 'Open Sans', sans-serif;
@@ -652,14 +701,19 @@ aside#affordable p {
 aside#instagram {
   clear: both;
   text-align: center;
-  padding: 2.4rem 0;
+  padding: 4.8rem 0;
   margin: 0 7.2rem 2.4rem;
   height: 15rem;
   overflow: hidden;
 }
-aside#instagram p {
+aside#instagram h2 {
+  color: #555555;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
   padding: 1.8rem 0 .6rem 0;
+  font-style: italic;
 }
 aside#instagram ul {
   margin: 0;
@@ -750,6 +804,10 @@ section#contact #submit-button:hover {
   /* IE6-9 */
 
   text-shadow: 1px 1px 1px #8c9405;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
   /* insert :active here */
 
 }
