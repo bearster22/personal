@@ -94,7 +94,7 @@ table {
 @lime: 		#bfc738 - #111;
 @dark: 		#555555;
 @gray: 		#cccccc;
-@aqua-dark:	#8ad1de - #333;
+@aqua-dark:	#8ad1de - #222;
 @radius:	1rem;					// for rounded corners
 
 
@@ -191,7 +191,7 @@ body	{	.text;
 h1		{	font-family: 'ChunkFiveRegular', serif;
 			font-size: 3.6rem;
 			line-height: 4.8rem;
-			padding: 2rem 0 .4rem 0;
+			padding: 1.6rem 0 .8rem 0;
 			color: @flame;
 			text-align: center;
 		}	
@@ -201,7 +201,7 @@ h2		{	font-family: 'Open Sans', sans-serif;
 			font-size: 2.4rem;
 			line-height: 2.4rem;			
 			padding: 1.8rem 0 .6rem 0;	
-			color: @flame;						
+			color: @aqua-dark;						
 		}
 		
 h3		{	font-family: 'Open Sans', sans-serif;
@@ -242,29 +242,47 @@ em		{	.text;
 /*******************************/
 		
 header	{	width: 100%;
-			height: 30rem;								
-			.gradient(@aqua, @aqua + #222);
-			div	{	.column(12);
+			height: 25rem;								
+			.gradient(@aqua - #111, @aqua + #111);
+			div	{	float: left;
+					padding: 0 3rem;
 					text-align: center;
 					font-family: 'ChunkFiveRegular', serif;
 					color: @flame;
 					a, a:hover, 
 					a:visited	{	text-decoration: none;
-									font-size: 9rem;
-									line-height: 30rem;
-									letter-spacing: -.2rem;
-									padding: 4.5rem 3rem 3.5rem;
+									font-size: 5rem;
+									line-height: 25rem;
+									padding: 3.2rem 2.1rem 2.6rem;
 									color: @flame;
 									background: #fff;
 									border-radius: 50%;
-									border: 1rem solid @flame;
+									border: 1.2rem solid @flame;
 								}
 				}
 				
+			hgroup	{display: block;}
 			
-			#hide	{	/* hiding the h1 until I figure out how to lay out header */
-						display: none;	
-					}
+			h1	{	text-align: left;
+					font-size: 3.6rem;
+					padding-top: 8rem;
+					font-family: 'Open Sans', sans-serif;
+					font-weight: 900;
+					padding-bottom: 0;
+					width: 560px;
+					line-height: 3.4rem;
+					text-transform: uppercase;
+					color: #fff;
+					text-shadow: 1px 1px 2px #222;
+				}
+			h2 {	padding-top: 0.5rem;
+					font-size: 1.8rem;
+					font-weight: 300;
+					line-height: 2rem;
+					color: #fff;
+					font-style: italic;
+					text-shadow: 1px 1px 1px #222;
+				}
 		}
 	
 
@@ -280,40 +298,41 @@ nav		{	clear: both;
 			box-shadow: inset 0 .2rem .2rem @dark - #111,
 						inset 0 -.2rem .2rem @dark - #111; 
 			ul	{	
-					li	{	.column(3);
+					li	{	.column(1);
 							a	{	letter-spacing: .05rem;
 									text-align: center;
 									padding: 1rem 0rem 1.4rem;
 									color: #fff;
 									display: block;
 									border-radius: @radius;
-									&:visited	{	color: #fff;	
-												}
-									&#active_item	{	color: @flame + #111;
+									
+									&:visited		{color: #fff;}
+									&#active_item	{	color: @flame;
+														text-shadow: 1px 1px 1px #222;
 													}
-									&:hover	{	text-decoration: none;
-												color: @flame;
-												.animate(250ms);
-
-											}
+									&:hover		{	text-decoration: none;
+													color: @flame;
+													text-shadow: 1px 1px 1px #222;
+													.animate(250ms);
+												}
 								}
 						}
+					li:first-of-type {.push(7);}
+					li:nth-child(3)	 {.column(2);}
 				}
 		}			
 		
 /*******************************/
-/* ARTICLE (USED AS WRAPPER) */
+/* PAGE LAYOUT */
 /*******************************/
 
 
 article	{	padding: 2.4rem 0rem;
-			> h1	{	padding: 4.8rem 0rem 2.4rem;
-					}
+			> h1	{padding: 4.8rem 0rem 0rem;}
 			
 			hgroup	{	text-align: center;
 						padding-bottom: 2.4rem;
-						h1	{	padding: 4.8rem 0rem 0rem;
-							}
+						h1	{padding: 4.8rem 0rem 0rem;}
 						h2	{	.text;
 								font-size: 2rem;
 								line-height: 2.4rem;
@@ -322,148 +341,184 @@ article	{	padding: 2.4rem 0rem;
 							}
 					}
 		}
-		
-		
+
+section	{padding: 2.4rem 0;}
+
+
+
+//////////////////
+// PAGE STYLES
+//////////////////
+
+
+
 /*******************************/
-/* SECTIONS (CONTENT BLOCKS) */
+/* HOMEPAGE */
 /*******************************/
 
 
-section	{	padding: 2.4rem 0;
-			&#intro	{	/* intro para on homepage */
-						div	{	.column(4);
-								img	{	float: right;
-									}
-							}
-							
-						h2	{	.column(7);
-								padding: 1.2rem 0 1.2rem 0;
+#intro	{	
+			p	{	.column(8);
+					.push(2);
+					text-align: left;
+					padding-bottom: 3.6rem;	
+				}
+		}
+
+/* large hover buttons */					 
+#home_nav	{	clear: both;
+				div	{	.column(2);
+						text-align: center;
+						&#portfolio_button	{.push(2);}
+						a	{	padding: 2.4rem 0 1.2rem;
 								color: @aqua-dark;
+								font-size: 9rem;
+								display: block;
+								h1	{	font-family: 'Open Sans', sans-serif;			
+										font-weight: 700;
+										font-size: 2.4rem;
+										color: @aqua-dark;
+										padding: 4rem 0 .8rem 0;
+										text-transform: uppercase;
+										letter-spacing: -.1rem;
+									}
+								&:hover,
+								&:hover h1	{	text-decoration: none;
+												color: @flame;
+												.animate(750ms);
+											}
 							}
-						p	{	.column(7);
+						p	{	.text;
+								line-height: 2rem;
 								padding-bottom: 2.4rem;
-								&:last-of-type	{	padding-bottom: 4.8rem;
-												}		
-							}
+							}	
 					}
-					 
-			&#home_nav	{	/* large hover buttons on homepage */
-							clear: both;
-							div	{	.column(3);
-									text-align: center;
-									a	{	padding: 4.8rem 0;
-											color: @aqua-dark;
-											font-size: 10rem;
-											display: block;
-											&:hover	{	text-decoration: none;
-														color: @flame;
-														.animate(500ms);
-														
-														h1	{	color: @flame;
-															}
-														p	{	color: @dark;
-															}
-													}
-											h1	{	font-family: 'Open Sans', sans-serif;			
-													font-weight: 700;
-													font-size: 2.4rem;
-													color: @aqua-dark;
-													padding: 4rem 0 .8rem 0;
-												}
-										}
-									p	{	.text;
-											line-height: 2rem;
-											padding-bottom: 2.4rem;
-										}	
-								}
-						}
+			}
 						
-			&#about	{	/* More about me on homepage */
-						display:none;
-						h1	{	padding-bottom: 2.4rem;
-							}
-						p	{	.column(5);
-								&:first-of-type	{	.push(1);
-												}
-								padding-bottom: 4.8rem;
-							}
-					}
+#about	{	
+			h1	{	.column(8);
+					.push(2);
+				}
+			p	{	.column(8);
+					.push(2);
+					padding-bottom: 2.4rem;
+					&:last-of-type {padding-bottom: 4.8rem;}
+				}
+		}
 			
-			&.portfolio	{	/* portfolio items */
-							clear: both;
-							div.image	{	.column(4);
-											a	{	float: right;
-													padding-top: 1.6rem;
-													padding-bottom: 4.8rem;
-												}
-										}
-							div.description	{	.column(5);
-												p	{	padding: .4rem 0 2rem 0;
-														&:last-of-type	{	padding-bottom: 4.8rem;
-														
-																		}
-													}
-											}
-							aside.details	{	.column(3);
-												h3	{	padding: 2.4rem 0 0rem 0;
-													}
-												a 	{	padding: 0;
-													}
-												div	{	color: @aqua-dark;
-														padding-bottom: 4.8rem;
-														span	{	padding-left: .4rem;
-																	padding-right: 1rem;
-																}
-													}
-										}
-						}
-			
-			
-			&#photography	{	/* photography column */
-								.column(5);
-								.push(1);	
-								text-align: center;
-								h2	{	padding: 3rem 0 1.8rem;
+/*******************************/
+/* PORTFOLIO */
+/*******************************/
+
+.portfolio	{	clear: both;
+				padding-top: 0;
+				div.image	{	.column(4);
+								a	{	float: right;
+										padding-top: 1.6rem;
+										padding-bottom: 4.8rem;
 									}
-								p	{	text-align: left;
-									}													
 							}
+				div.description	{	.column(5);
+									p	{	padding: .4rem 0 2rem 0;
+											&:last-of-type	{padding-bottom: 4.8rem;}
+										}
+								}
+				aside.details	{	.column(3);
+									h3	{padding: 2.4rem 0 0rem 0;}
+									a 	{padding: 0;}
+									div	{	color: @aqua-dark;
+											padding-bottom: 4.8rem;
+											span	{	padding-left: .4rem;
+														padding-right: 1rem;
+													}
+										}
+								}
+			}
+			
+			
+/*******************************/
+/* PHOTOGRAPHY & DESIGN */
+/*******************************/
+
+#photography	{	.column(5);
+					.push(1);	
+					text-align: center;
+					h2	{padding: 3rem 0 1.8rem;}
+					p	{	text-align: left;
+							padding: 0 2rem 0 3rem;
+						}													
+				}
 								
+#design	{	.column(5);
+			text-align: center;
+			h2	{	padding: 3rem 0 1.8rem;
+				}
+			p	{	text-align: left;
+					padding: 0 2rem 0 3rem;
+				}														
+		}
+		
+#instagram	{	clear: both;
+				text-align: center;
+				padding: 4.8rem 0;
+				margin: 0 7.2rem 2.4rem;
+				height: 15rem;
+				overflow: hidden;							
+				h2	{	.text;
+						font-weight: 400;
+						padding: 1.8rem 0 .6rem 0;
+						font-style: italic;
+					}
+				ul	{	margin: 0;
+						padding: 0;
+					}
+				li	{	float: left;
+						padding: 2rem 0 2rem 3rem;
+					}	
+			}
 						
-			&#design	{	/* design column */	
-							.column(5);
-							text-align: center;
-							h2	{	padding: 3rem 0 1.8rem;
-									}
-							p	{	text-align: left;
-								}														
-						}
-						
+/*******************************/
+/* SERVICES */
+/*******************************/
+
+.service	{	.column(5);													
+				padding: 2.4rem 0;
+				&.indent	{	.push(1);
+								/* REPLACE WITH NTH-OF-TYPE */
+								/* http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/ */
+								/* should be outside section selector (in article) */
+							}
+				div	{	width: 12rem;
+						float: left;
+						color: @aqua-dark;
+						font-size: 7.2rem;
+						text-align: center;
+						padding: 3.4rem .5rem 0rem 0rem;
+						h2	{	font-size: 2rem;
+								line-height: 6rem;
+								color: @aqua-dark;
+								text-align: center;
+							}
+					} 
+				&:last-of-type	{padding-bottom: 4.8rem;}
+			}
 			
-			&.service	{	/* services columns */
-							.column(5);													
-							padding: 2.4rem 0;
-							&.indent	{	.push(1);
-										}
-							div	{	width: 12rem;
-									float: left;
-									color: @aqua-dark;
-									font-size: 7.2rem;
-									text-align: center;
-									padding: 3.4rem .5rem 1.4rem 0rem;
-									h2	{	font-size: 2rem;
-											line-height: 6rem;
-											color: @aqua-dark;
-											text-align: center;
-											padding-bottom: 2.4rem;
-										}
-								} 
-							p	{	padding-bottom:2.4rem;
-								}
-							&:last-of-type	{	padding-bottom: 4.8rem;
-											}
-						}
-		}				
+#affordable	{	clear: both;
+				text-align: center;
+				border-top: 1px dotted @gray;
+				border-bottom: 1px dotted @gray;
+				padding: 1.4rem 7.2rem 1rem;
+				margin: 4.8rem 7.2rem;
+				h1	{	font-family: 'Open Sans', sans-serif;
+						font-size: 2rem;
+						line-height: 2.4rem;
+						padding: 1.4rem 0 1rem 0;
+					}
+				p	{	font-size: 1.3rem;
+						line-height: 2rem;
+						padding-bottom: 2.4rem;
+					}
+			}
 		
 		
 /*******************************/
@@ -478,105 +533,56 @@ footer	{	clear: both;
 			padding: 4.8rem 0;
 			color: #fff;
 			box-shadow: inset 0 .2rem .2rem @dark - #111;
-			
-			#copyright	{	.column(3);                
-							.push(1);	
-						}
-			#contact	{	.column(4);
-							.push(0);
-							text-align: center;
-									a	{	color: #fff;
-											display: block;
-											padding: 2.4rem 0 1.2rem 0;
-											background: @lime;
-											border-radius: @radius;
-											.tab-shadow(@lime, @dark);
-											#button_large	{	font-size: 2.4rem;
-																font-weight: 700;
-															}
-											#button_small	{	line-height: 2.4rem;
-															}
-											/* insert :active here */
-											&:hover	{	text-decoration: none;
-														.gradient(@lime, @lime + #111);
-														.text-shadow(@lime);
-														.animate(500ms);
-													}
-										}
-						}
-			
-			
-			#invisible	{	/* hide the "contact me" button on the contact page */
-							visibility:	hidden;
-						}
-					
-			#social	{	.column(3);
-						text-align: center;
-						ul	{	float: right;
-								li	{	float: right;
-										padding: 0rem 1rem;
-										div	{	font-size:	2.4rem;
-												line-height: 2.4rem;
-											}
-										a	{	color: #fff;
-												&:visited	{	color: #fff
-															}
-												&:hover		{	color: @flame + #111;
-																text-decoration: none;
-														
-															}
-											}
-									}
-							}		
-					}
 		}
-		
-		
-		
-/*******************************/
-/* ASIDES */
-/*******************************/
+					
+#copyright	{	.column(3);                
+				.push(1);	
+			}
 
-		
-aside	{	&#affordable	{	clear: both;
-								text-align: center;
-								border-top: 1px dotted @gray;
-								border-bottom: 1px dotted @gray;
-								padding: 1.4rem 7.2rem 1rem;
-								margin: 4.8rem 7.2rem;
-								h1	{	font-family: 'Open Sans', sans-serif;
-										font-size: 2rem;
-										line-height: 2.4rem;
-										padding: 1.4rem 0 1rem 0;
-									}
-								p	{	font-size: 1.3rem;
-										line-height: 2rem;
-										padding-bottom: 2.4rem;
-									}
-							}
-					
-			&#instagram	{	clear: both;
-							text-align: center;
-							padding: 4.8rem 0;
-							margin: 0 7.2rem 2.4rem;
-							height: 15rem;
-							overflow: hidden;							
-							h2	{	.text;
-									font-weight: 400;
-									padding: 1.8rem 0 .6rem 0;
-									font-style: italic;
+#contact	{	.column(4);
+				.push(0);
+				text-align: center;
+				a	{	color: #fff;
+						display: block;
+						padding: 2.4rem 0 1.2rem 0;
+						background: @lime;
+						border-radius: @radius;
+						.tab-shadow(@lime, @dark);
+						#button_large	{	font-size: 2.4rem;
+											font-weight: 700;
+										}
+						#button_small	{line-height: 2.4rem;}
+						/* insert :active here */
+						&:hover	{	text-decoration: none;
+									.gradient(@lime, @lime + #111);
+									.text-shadow(@lime);
+									.animate(500ms);
 								}
-							ul	{	margin: 0;
-									padding: 0;
-								}
-							li	{	float: left;
-									padding: 2rem 0 2rem 3rem;
-								}	
-						}
+					}
+			}
 			
+/* hide the "contact me" button on the contact page */			
+#invisible	{visibility: hidden;}
+					
+#social	{	.column(3);
+			text-align: center;
+			ul	{	float: right;
+					li	{	float: right;
+							padding: 0rem 1rem;
+							div	{	font-size:	2.4rem;
+									line-height: 2.4rem;
+								}
+							a	{	color: #fff;
+									&:visited	{color: #fff}
+									&:hover		{	color: @flame + #111;
+													text-decoration: none;									
+												}
+								}
+						}
+				}		
 		}
-		
-		
+
+
 		
 /*******************************/
 /* CONTACT FORM */
@@ -584,12 +590,14 @@ aside	{	&#affordable	{	clear: both;
 
 section#contact	{	.column(6);
 					.push(3);
+					padding-top: 0;
 					input, select, label, textarea	{	font-size: 1.6rem;
+														line-height: 2.4rem;
 													}	
 					input, select, textarea	{	display: block;
 												width: 100%;
 												border: 1px solid @gray;
-												padding: .8rem 1rem;
+												padding: 1rem;
 												border-radius: 1rem;
 												background: @gray + #222;
 											}	
@@ -603,15 +611,16 @@ section#contact	{	.column(6);
 									margin-bottom: 4.8rem;
 								}
 					label		{	display: block;
-									margin: 2rem 0 .4rem;
+									margin: 1rem 0 0;
 								}
 					.required	{	font-weight: 700;
 									color: @flame;
 								}
 					#submit-button	{	color: #fff;
+										width: 50%;
 										font-size: 2.4rem;
 										padding: 2.4rem 0;
-										margin-bottom: 2.4rem;
+										margin: 0 auto 2.4rem;
 										font-weight: 700;
 										background: @lime;
 										border: none;
@@ -626,6 +635,9 @@ section#contact	{	.column(6);
 												}
 												
 									}
+					p	{	padding: 2.4rem 0 4.8rem;
+							text-align: center;
+						}
 					#loading	{	width: 32px;
 									height: 32px;
 									background-image: url(../img/loading.gif); 
@@ -665,6 +677,8 @@ section#contact	{	.column(6);
 					#success.visible	{	display: block;
 										}
 					#req-field-desc		{	font-style: italic;
+											padding: 0;
+											text-align: left;
 										}
 							
 					input:required, 

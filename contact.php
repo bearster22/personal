@@ -19,8 +19,11 @@
 
 <body>
 <header>
-	<h1 id="hide">Sarah Barrow Web Design</h1>
-	<div><a href="index.html" title="Sarah Barrow Web Design">SB</a></div>
+	<hgroup>
+    		<div><a href="index.html" title="Sarah Barrow Web Design">SB</a></div>
+            <h1>Sarah Barrow Web Design</h1>
+            <h2>Freelance front-end development and web design</h2>
+   	</hgroup>
 </header>  
   	
 <nav>
@@ -29,18 +32,18 @@
 	    <li><a href="web-services.html" title="Services">Services</a></li>
         <li><a href="photography.html" title="Photography">Photography &amp; Design</a></li>
         <!--<li><a href="blog/index.html" title="Blog">Blog</a></li>-->
-        <li><a id="active-item" href="contact.php" title="Contact">Contact</a></li>
+        <li><a id="active_item" href="contact.php" title="Contact">Hire Me!</a></li>
     </ul>
 </nav>
     
 <article>    
 	<hgroup>
     	<h1>Contact Me!</h1>
-        <h2>Fill out my contact form below to chat about your project, even if you just have a question or are looking for a quote.</h2>
+        <h2>Question? Comment? Want to chat about a project or get a quote? Fill out the form below.</h2>
     </hgroup>
     
 	<section id="contact">
-         
+         <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>
 		<?php  
     	//init variables  
    			$cf = array();  
@@ -71,19 +74,20 @@
                 <label for="email">Email Address: <span class="required">*</span></label>
                 <input type="email" id="email" name="email" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['email'] : '' ?>" placeholder="johndoe@email.com" required="required" /><br />
              	<label for="phone">Phone: </label>
-                <input type="tel" id="phone" name="phone" value=value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['phone'] : '' ?>" /><br />
+                <input type="tel" id="phone" name="phone" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['phone'] : '' ?>" placeholder="Phone" /><br />
                 <label for="website">Website: </label>
-                <input type="url" id="website" name="website" value=value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['website'] : '' ?>" /><br />
+                <input type="url" id="website" name="website" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['website'] : '' ?>" placeholder="Website (http:// required)" /><br />
                 <label for="message">Message: <span class="required">*</span></label>
                 <textarea id="message" name="message" placeholder="What can I help you with?" required="required"><?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['message'] : '' ?></textarea>
                 <span id="loading"></span>
                 <input type="submit" value"Send away!" id="submit-button" />
-                <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>
+                
              </form>   
     <!-- unsetting session -->
     <?php unset($_SESSION['cf_returndata']); ?> 
     
-    <p><strong>Having trouble with the form?</strong> Email me directly at sarah[dot]barrow[at]gmail[dot]com.</p>
+    <p><strong>Having trouble with the form?</strong><br />Email me directly at sarah[dot]barrow[at]gmail[dot]com.</p>
+       
 	</section>
     
 </article>

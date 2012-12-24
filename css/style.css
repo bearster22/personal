@@ -190,7 +190,7 @@ h1 {
   font-family: 'ChunkFiveRegular', serif;
   font-size: 3.6rem;
   line-height: 4.8rem;
-  padding: 2rem 0 .4rem 0;
+  padding: 1.6rem 0 .8rem 0;
   color: #ea1e32;
   text-align: center;
 }
@@ -200,7 +200,7 @@ h2 {
   font-size: 2.4rem;
   line-height: 2.4rem;
   padding: 1.8rem 0 .6rem 0;
-  color: #ea1e32;
+  color: #68afbc;
 }
 h3 {
   font-family: 'Open Sans', sans-serif;
@@ -208,7 +208,7 @@ h3 {
   font-size: 1.8rem;
   line-height: 2.4rem;
   padding: 2rem 0 .4rem 0;
-  color: #579eab;
+  color: #68afbc;
 }
 a {
   color: #ea1e32;
@@ -241,24 +241,24 @@ em {
 /*******************************/
 header {
   width: 100%;
-  height: 30rem;
-  background: #8ad1de;
-  background: -moz-linear-gradient(top, #8ad1de 0%, #acf3ff 50%, #8ad1de 100%);
+  height: 25rem;
+  background: #79c0cd;
+  background: -moz-linear-gradient(top, #79c0cd 0%, #9be2ef 50%, #79c0cd 100%);
   /* FF3.6+ */
 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8ad1de), color-stop(50%, #acf3ff), color-stop(100%, #8ad1de));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #79c0cd), color-stop(50%, #9be2ef), color-stop(100%, #79c0cd));
   /* Chrome, Safari4+ */
 
-  background: -webkit-linear-gradient(top, #8ad1de 0%, #acf3ff 50%, #8ad1de 100%);
+  background: -webkit-linear-gradient(top, #79c0cd 0%, #9be2ef 50%, #79c0cd 100%);
   /* Chrome10+,Safari5.1+ */
 
-  background: -o-linear-gradient(top, #8ad1de 0%, #acf3ff 50%, #8ad1de 100%);
+  background: -o-linear-gradient(top, #79c0cd 0%, #9be2ef 50%, #79c0cd 100%);
   /* Opera 11.10+ */
 
-  background: -ms-linear-gradient(top, #8ad1de 0%, #acf3ff 50%, #8ad1de 100%);
+  background: -ms-linear-gradient(top, #79c0cd 0%, #9be2ef 50%, #79c0cd 100%);
   /* IE10+ */
 
-  background: linear-gradient(to bottom, #8ad1de 0%, #acf3ff 50%, #8ad1de 100%);
+  background: linear-gradient(to bottom, #79c0cd 0%, #9be2ef 50%, #79c0cd 100%);
   /* W3C */
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color', endColorstr='@color', GradientType=0);
@@ -266,10 +266,8 @@ header {
 
 }
 header div {
-  display: inline;
   float: left;
-  width: 97.91666666666666%;
-  margin: 0 1.0416666666666665%;
+  padding: 0 3rem;
   text-align: center;
   font-family: 'ChunkFiveRegular', serif;
   color: #ea1e32;
@@ -278,19 +276,38 @@ header div a,
 header div a:hover,
 header div a:visited {
   text-decoration: none;
-  font-size: 9rem;
-  line-height: 30rem;
-  letter-spacing: -0.2rem;
-  padding: 4.5rem 3rem 3.5rem;
+  font-size: 5rem;
+  line-height: 25rem;
+  padding: 3.2rem 2.1rem 2.6rem;
   color: #ea1e32;
   background: #fff;
   border-radius: 50%;
-  border: 1rem solid #ea1e32;
+  border: 1.2rem solid #ea1e32;
 }
-header #hide {
-  /* hiding the h1 until I figure out how to lay out header */
-
-  display: none;
+header hgroup {
+  display: block;
+}
+header h1 {
+  text-align: left;
+  font-size: 3.6rem;
+  padding-top: 8rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
+  padding-bottom: 0;
+  width: 560px;
+  line-height: 3.4rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 1px 1px 2px #222;
+}
+header h2 {
+  padding-top: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 2rem;
+  color: #fff;
+  font-style: italic;
+  text-shadow: 1px 1px 1px #222;
 }
 /*******************************/
 /* NAVIGATION */
@@ -305,7 +322,7 @@ nav {
 nav ul li {
   display: inline;
   float: left;
-  width: 22.916666666666664%;
+  width: 6.25%;
   margin: 0 1.0416666666666665%;
 }
 nav ul li a {
@@ -320,24 +337,35 @@ nav ul li a:visited {
   color: #fff;
 }
 nav ul li a#active_item {
-  color: #fb2f43;
+  color: #ea1e32;
+  text-shadow: 1px 1px 1px #222;
 }
 nav ul li a:hover {
   text-decoration: none;
   color: #ea1e32;
+  text-shadow: 1px 1px 1px #222;
   -webkit-transition: all 250ms;
   -moz-transition: all 250ms;
   -o-transition: all 250ms;
   transition: all 250ms;
 }
+nav ul li:first-of-type {
+  margin-left: 59.375%;
+}
+nav ul li:nth-child(3) {
+  display: inline;
+  float: left;
+  width: 14.583333333333334%;
+  margin: 0 1.0416666666666665%;
+}
 /*******************************/
-/* ARTICLE (USED AS WRAPPER) */
+/* PAGE LAYOUT */
 /*******************************/
 article {
   padding: 2.4rem 0rem;
 }
 article > h1 {
-  padding: 4.8rem 0rem 2.4rem;
+  padding: 4.8rem 0rem 0rem;
 }
 article hgroup {
   text-align: center;
@@ -355,83 +383,59 @@ article hgroup h2 {
   padding: 1rem 0 1.4rem;
   font-weight: normal;
 }
-/*******************************/
-/* SECTIONS (CONTENT BLOCKS) */
-/*******************************/
 section {
   padding: 2.4rem 0;
 }
-section#intro {
-  /* intro para on homepage */
-
-}
-section#intro div {
+/*******************************/
+/* HOMEPAGE */
+/*******************************/
+#intro p {
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 64.58333333333334%;
   margin: 0 1.0416666666666665%;
+  margin-left: 17.708333333333332%;
+  text-align: left;
+  padding-bottom: 3.6rem;
 }
-section#intro div img {
-  float: right;
-}
-section#intro h2 {
-  display: inline;
-  float: left;
-  width: 56.25%;
-  margin: 0 1.0416666666666665%;
-  padding: 1.2rem 0 1.2rem 0;
-  color: #579eab;
-}
-section#intro p {
-  display: inline;
-  float: left;
-  width: 56.25%;
-  margin: 0 1.0416666666666665%;
-  padding-bottom: 2.4rem;
-}
-section#intro p:last-of-type {
-  padding-bottom: 4.8rem;
-}
-section#home_nav {
-  /* large hover buttons on homepage */
-
+/* large hover buttons */#home_nav {
   clear: both;
 }
-section#home_nav div {
+#home_nav div {
   display: inline;
   float: left;
-  width: 22.916666666666664%;
+  width: 14.583333333333334%;
   margin: 0 1.0416666666666665%;
   text-align: center;
 }
-section#home_nav div a {
-  padding: 4.8rem 0;
-  color: #579eab;
-  font-size: 10rem;
+#home_nav div#portfolio_button {
+  margin-left: 17.708333333333332%;
+}
+#home_nav div a {
+  padding: 2.4rem 0 1.2rem;
+  color: #68afbc;
+  font-size: 9rem;
   display: block;
 }
-section#home_nav div a:hover {
-  text-decoration: none;
-  color: #ea1e32;
-  -webkit-transition: all 500ms;
-  -moz-transition: all 500ms;
-  -o-transition: all 500ms;
-  transition: all 500ms;
-}
-section#home_nav div a:hover h1 {
-  color: #ea1e32;
-}
-section#home_nav div a:hover p {
-  color: #555555;
-}
-section#home_nav div a h1 {
+#home_nav div a h1 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 2.4rem;
-  color: #579eab;
+  color: #68afbc;
   padding: 4rem 0 .8rem 0;
+  text-transform: uppercase;
+  letter-spacing: -0.1rem;
 }
-section#home_nav div p {
+#home_nav div a:hover,
+#home_nav div a:hover h1 {
+  text-decoration: none;
+  color: #ea1e32;
+  -webkit-transition: all 750ms;
+  -moz-transition: all 750ms;
+  -o-transition: all 750ms;
+  transition: all 750ms;
+}
+#home_nav div p {
   color: #555555;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
@@ -439,75 +443,78 @@ section#home_nav div p {
   line-height: 2rem;
   padding-bottom: 2.4rem;
 }
-section#about {
-  /* More about me on homepage */
-
-  display: none;
-}
-section#about h1 {
-  padding-bottom: 2.4rem;
-}
-section#about p {
+#about h1 {
   display: inline;
   float: left;
-  width: 39.58333333333333%;
+  width: 64.58333333333334%;
   margin: 0 1.0416666666666665%;
+  margin-left: 17.708333333333332%;
+}
+#about p {
+  display: inline;
+  float: left;
+  width: 64.58333333333334%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 17.708333333333332%;
+  padding-bottom: 2.4rem;
+}
+#about p:last-of-type {
   padding-bottom: 4.8rem;
 }
-section#about p:first-of-type {
-  margin-left: 9.374999999999998%;
-}
-section.portfolio {
-  /* portfolio items */
-
+/*******************************/
+/* PORTFOLIO */
+/*******************************/
+.portfolio {
   clear: both;
+  padding-top: 0;
 }
-section.portfolio div.image {
+.portfolio div.image {
   display: inline;
   float: left;
   width: 31.25%;
   margin: 0 1.0416666666666665%;
 }
-section.portfolio div.image a {
+.portfolio div.image a {
   float: right;
   padding-top: 1.6rem;
   padding-bottom: 4.8rem;
 }
-section.portfolio div.description {
+.portfolio div.description {
   display: inline;
   float: left;
   width: 39.58333333333333%;
   margin: 0 1.0416666666666665%;
 }
-section.portfolio div.description p {
+.portfolio div.description p {
   padding: .4rem 0 2rem 0;
 }
-section.portfolio div.description p:last-of-type {
+.portfolio div.description p:last-of-type {
   padding-bottom: 4.8rem;
 }
-section.portfolio aside.details {
+.portfolio aside.details {
   display: inline;
   float: left;
   width: 22.916666666666664%;
   margin: 0 1.0416666666666665%;
 }
-section.portfolio aside.details h3 {
+.portfolio aside.details h3 {
   padding: 2.4rem 0 0rem 0;
 }
-section.portfolio aside.details a {
+.portfolio aside.details a {
   padding: 0;
 }
-section.portfolio aside.details div {
-  color: #579eab;
+.portfolio aside.details div {
+  color: #68afbc;
   padding-bottom: 4.8rem;
 }
-section.portfolio aside.details div span {
+.portfolio aside.details div span {
   padding-left: .4rem;
   padding-right: 1rem;
 }
-section#photography {
-  /* photography column */
-
+/*******************************/
+/* PHOTOGRAPHY & DESIGN */
+/*******************************/
+#photography {
   display: inline;
   float: left;
   width: 39.58333333333333%;
@@ -515,58 +522,106 @@ section#photography {
   margin-left: 9.374999999999998%;
   text-align: center;
 }
-section#photography h2 {
+#photography h2 {
   padding: 3rem 0 1.8rem;
 }
-section#photography p {
+#photography p {
   text-align: left;
+  padding: 0 2rem 0 3rem;
 }
-section#design {
-  /* design column */
+#design {
   display: inline;
   float: left;
   width: 39.58333333333333%;
   margin: 0 1.0416666666666665%;
   text-align: center;
 }
-section#design h2 {
+#design h2 {
   padding: 3rem 0 1.8rem;
 }
-section#design p {
+#design p {
   text-align: left;
+  padding: 0 2rem 0 3rem;
 }
-section.service {
-  /* services columns */
-
+#instagram {
+  clear: both;
+  text-align: center;
+  padding: 4.8rem 0;
+  margin: 0 7.2rem 2.4rem;
+  height: 15rem;
+  overflow: hidden;
+}
+#instagram h2 {
+  color: #555555;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  padding: 1.8rem 0 .6rem 0;
+  font-style: italic;
+}
+#instagram ul {
+  margin: 0;
+  padding: 0;
+}
+#instagram li {
+  float: left;
+  padding: 2rem 0 2rem 3rem;
+}
+/*******************************/
+/* SERVICES */
+/*******************************/
+.service {
   display: inline;
   float: left;
   width: 39.58333333333333%;
   margin: 0 1.0416666666666665%;
   padding: 2.4rem 0;
 }
-section.service.indent {
+.service.indent {
   margin-left: 9.374999999999998%;
+  /* REPLACE WITH NTH-OF-TYPE */
+
+  /* http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/ */
+
+  /* should be outside section selector (in article) */
+
 }
-section.service div {
+.service div {
   width: 12rem;
   float: left;
-  color: #579eab;
+  color: #68afbc;
   font-size: 7.2rem;
   text-align: center;
-  padding: 3.4rem .5rem 1.4rem 0rem;
+  padding: 3.4rem .5rem 0rem 0rem;
 }
-section.service div h2 {
+.service div h2 {
   font-size: 2rem;
   line-height: 6rem;
-  color: #579eab;
+  color: #68afbc;
   text-align: center;
-  padding-bottom: 2.4rem;
 }
-section.service p {
-  padding-bottom: 2.4rem;
-}
-section.service:last-of-type {
+.service:last-of-type {
   padding-bottom: 4.8rem;
+}
+#affordable {
+  clear: both;
+  text-align: center;
+  border-top: 1px dotted #cccccc;
+  border-bottom: 1px dotted #cccccc;
+  padding: 1.4rem 7.2rem 1rem;
+  margin: 4.8rem 7.2rem;
+}
+#affordable h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  padding: 1.4rem 0 1rem 0;
+}
+#affordable p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  padding-bottom: 2.4rem;
 }
 /*******************************/
 /* FOOTER */
@@ -581,14 +636,14 @@ footer {
   color: #fff;
   box-shadow: inset 0 0.2rem 0.2rem #444444;
 }
-footer #copyright {
+#copyright {
   display: inline;
   float: left;
   width: 22.916666666666664%;
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
 }
-footer #contact {
+#contact {
   display: inline;
   float: left;
   width: 31.25%;
@@ -596,7 +651,7 @@ footer #contact {
   margin-left: 1.0416666666666665%;
   text-align: center;
 }
-footer #contact a {
+#contact a {
   color: #fff;
   display: block;
   padding: 2.4rem 0 1.2rem 0;
@@ -606,14 +661,14 @@ footer #contact a {
   /* insert :active here */
 
 }
-footer #contact a #button_large {
+#contact a #button_large {
   font-size: 2.4rem;
   font-weight: 700;
 }
-footer #contact a #button_small {
+#contact a #button_small {
   line-height: 2.4rem;
 }
-footer #contact a:hover {
+#contact a:hover {
   text-decoration: none;
   background: #aeb627;
   background: -moz-linear-gradient(top, #aeb627 0%, #bfc738 50%, #aeb627 100%);
@@ -643,85 +698,36 @@ footer #contact a:hover {
   -o-transition: all 500ms;
   transition: all 500ms;
 }
-footer #invisible {
-  /* hide the "contact me" button on the contact page */
-
+/* hide the "contact me" button on the contact page */#invisible {
   visibility: hidden;
 }
-footer #social {
+#social {
   display: inline;
   float: left;
   width: 22.916666666666664%;
   margin: 0 1.0416666666666665%;
   text-align: center;
 }
-footer #social ul {
+#social ul {
   float: right;
 }
-footer #social ul li {
+#social ul li {
   float: right;
   padding: 0rem 1rem;
 }
-footer #social ul li div {
+#social ul li div {
   font-size: 2.4rem;
   line-height: 2.4rem;
 }
-footer #social ul li a {
+#social ul li a {
   color: #fff;
 }
-footer #social ul li a:visited {
+#social ul li a:visited {
   color: #ffffff;
 }
-footer #social ul li a:hover {
+#social ul li a:hover {
   color: #fb2f43;
   text-decoration: none;
-}
-/*******************************/
-/* ASIDES */
-/*******************************/
-aside#affordable {
-  clear: both;
-  text-align: center;
-  border-top: 1px dotted #cccccc;
-  border-bottom: 1px dotted #cccccc;
-  padding: 1.4rem 7.2rem 1rem;
-  margin: 4.8rem 7.2rem;
-}
-aside#affordable h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2rem;
-  line-height: 2.4rem;
-  padding: 1.4rem 0 1rem 0;
-}
-aside#affordable p {
-  font-size: 1.3rem;
-  line-height: 2rem;
-  padding-bottom: 2.4rem;
-}
-aside#instagram {
-  clear: both;
-  text-align: center;
-  padding: 4.8rem 0;
-  margin: 0 7.2rem 2.4rem;
-  height: 15rem;
-  overflow: hidden;
-}
-aside#instagram h2 {
-  color: #555555;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  font-weight: 400;
-  padding: 1.8rem 0 .6rem 0;
-  font-style: italic;
-}
-aside#instagram ul {
-  margin: 0;
-  padding: 0;
-}
-aside#instagram li {
-  float: left;
-  padding: 2rem 0 2rem 3rem;
 }
 /*******************************/
 /* CONTACT FORM */
@@ -732,12 +738,14 @@ section#contact {
   width: 47.91666666666667%;
   margin: 0 1.0416666666666665%;
   margin-left: 26.041666666666668%;
+  padding-top: 0;
 }
 section#contact input,
 section#contact select,
 section#contact label,
 section#contact textarea {
   font-size: 1.6rem;
+  line-height: 2.4rem;
 }
 section#contact input,
 section#contact select,
@@ -745,7 +753,7 @@ section#contact textarea {
   display: block;
   width: 100%;
   border: 1px solid #cccccc;
-  padding: .8rem 1rem;
+  padding: 1rem;
   border-radius: 1rem;
   background: #eeeeee;
 }
@@ -762,7 +770,7 @@ section#contact textarea {
 }
 section#contact label {
   display: block;
-  margin: 2rem 0 .4rem;
+  margin: 1rem 0 0;
 }
 section#contact .required {
   font-weight: 700;
@@ -770,9 +778,10 @@ section#contact .required {
 }
 section#contact #submit-button {
   color: #fff;
+  width: 50%;
   font-size: 2.4rem;
   padding: 2.4rem 0;
-  margin-bottom: 2.4rem;
+  margin: 0 auto 2.4rem;
   font-weight: 700;
   background: #aeb627;
   border: none;
@@ -811,6 +820,10 @@ section#contact #submit-button:hover {
   /* insert :active here */
 
 }
+section#contact p {
+  padding: 2.4rem 0 4.8rem;
+  text-align: center;
+}
 section#contact #loading {
   width: 32px;
   height: 32px;
@@ -842,7 +855,7 @@ section#contact #errors li #info:before {
   content: '';
 }
 section#contact #success {
-  color: #579eab;
+  color: #68afbc;
   padding: 1rem 0 1rem 5rem;
   margin: 2.4rem 0;
   display: block;
@@ -860,6 +873,8 @@ section#contact #success.visible {
 }
 section#contact #req-field-desc {
   font-style: italic;
+  padding: 0;
+  text-align: left;
 }
 section#contact input:required,
 section#contact textarea:required {
