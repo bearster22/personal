@@ -38,7 +38,7 @@
     
 <article>    
 	<hgroup>
-    	<h1>Contact Me!</h1>
+    	<h1>Contact me!</h1>
         <h2>Question? Comment? Want to chat about a project or get a quote? Fill out the form below.</h2>
     </hgroup>
     
