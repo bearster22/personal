@@ -54,19 +54,7 @@
     			}  
     	?>  
         
-        <ul id="errors" class="<?php echo ($sr && !$cf['form_ok']) ? 'visible' : ''; ?>">  
-        	<li id="info">There were some problems with your form submission:</li>  
-        	<?php  
-        		if(isset($cf['errors']) && count($cf['errors']) > 0) :  
-            	foreach($cf['errors'] as $error) :  
-        	?>  
-        	<li><?php echo $error ?></li>  
-        	<?php  
-            	endforeach;  
-        		endif;  
-        	?>  
-    	</ul>  
-    	<p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for your message! We will get back to you ASAP!</p>  
+         
     
             <form method="post" action="process.php">
             	<label for="name">Name: <span class="required">*</span></label>
@@ -80,9 +68,28 @@
                 <label for="message">Message: <span class="required">*</span></label>
                 <textarea id="message" name="message" placeholder="What can I help you with?" required="required"><?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['message'] : '' ?></textarea>
                 <span id="loading"></span>
+                
+        <ul id="errors" class="<?php echo ($sr && !$cf['form_ok']) ? 'visible' : ''; ?>">  
+        	<li id="info">There were some problems with your form submission:</li>  
+        	<?php  
+        		if(isset($cf['errors']) && count($cf['errors']) > 0) :  
+            	foreach($cf['errors'] as $error) :  
+        	?>  
+        	<li><?php echo $error ?></li>  
+        	<?php  
+            	endforeach;  
+        		endif;  
+        	?>  
+    	</ul>  
+    	<p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for your message! We will get back to you ASAP!</p> 
+                
+                
+                
                 <input type="submit" value"Send away!" id="submit-button" />
                 
-             </form>   
+             </form>
+             
+       
     <!-- unsetting session -->
     <?php unset($_SESSION['cf_returndata']); ?> 
     
