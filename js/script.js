@@ -2,11 +2,6 @@
 
 
 
-
-
-
-
-
 // SYMBOLSET: SOCIAL AND STANDARD
 /*
 * Symbolset: Social
