@@ -17,7 +17,7 @@
 <body>
 <header>
 	<hgroup>
-    		<div><a href="index.html" title="Sarah Barrow Web Design">SB</a></div>
+    		<div><a href="index.html" title="Sarah Barrow Web Design" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Home']);">SB</a></div>
             <h1>Sarah Barrow Web Design</h1>
             <h2>Freelance front-end development and web design</h2>
    	</hgroup>
@@ -25,26 +25,26 @@
   	
 <nav>
 	<ul>
-		<li><a href="web-portfolio.html" title="Portfolio">Portfolio</a></li>
-	    <li><a href="web-services.html" title="Services">Services</a></li>
-        <li><a id="active_item" href="photography.html" title="Photography and Design">Photography &amp; Design</a></li>
+		<li><a href="web-portfolio.html" title="Portfolio" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Portfolio']);">Portfolio</a></li>
+	    <li><a href="web-services.html" title="Services" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Services']);">Services</a></li>
+        <li><a id="active_item" href="photography.html" title="Photography and Design" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Photography']);">Photography &amp; Design</a></li>
         <!--<li><a href="blog/index.html" title="Blog">Blog</a></li>-->
-        <li><a href="contact.php" title="Contact">Hire Me!</a></li>
+        <li><a href="contact.php" title="Contact" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Contact']);">Hire Me!</a></li>
     </ul>
 </nav>
     
 <article>    
 	<h1>Photography, art, and design</h1>
     <section id="photography">
-    	<a href="http://www.flickr.com/photos/sarahbarrow/sets/72157631574830832/show/" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'flickr-photos']);" target="_blank" title="View photography Flickr feed"><img src="img/bangkok-400.jpg" height="250" width="400" alt="Bangkok sunrise"></a>
+    	<a href="http://www.flickr.com/photos/sarahbarrow/sets/72157631574830832/show/" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'Flickr Photography']);" target="_blank" title="View photography Flickr feed"><img src="img/bangkok-400.jpg" height="250" width="400" alt="Bangkok sunrise"></a>
     	<h2>Photography</h2>
-        <p>In addition to web design, I'm a trained photographer. I have experience with landscape, travel, architectural, and art/product photography. If your website sells a physical item or service, don't forget to consider high-quality images! Above you can see a slideshow of some of my previous photography work.</p>
+        <p>I'm am amateur photographer in addition to my web design and development work. I specialize in travel and landscape photography and have experience with architectural, art/documentation, and product photography.</p>
         
 	</section>
     <section id="design">
-    	<a href="http://www.flickr.com/photos/sarahbarrow/sets/72157629901463439/show/" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'flickr-design']);" target="_blank" title="View art and design Flickr feed"><img src="img/wedding-400.jpg" height="250" width="400" alt="Email header design"></a>
+    	<a href="http://www.flickr.com/photos/sarahbarrow/sets/72157629901463439/show/" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'Flickr Design']);" target="_blank" title="View art and design Flickr feed"><img src="img/wedding-400.jpg" height="250" width="400" alt="Wedding logo design"></a>
     	<h2>Art and Design</h2>
-        <p>Branding of your website expands beyond the Internet... you need to consider how the design/style/branding of your site syncs with the branding of your print pieces (or even physical items). Above is a slideshow of not only visual identity systems, but also general art and graphic design that I've done.</p>
+        <p>I also have several years' experience with graphic design, branding, and visual identity systems. Check out a sample of my branding, design, and art work above.</p>
         
     </section>
 </article>
@@ -57,22 +57,22 @@
 <footer>
 	<div id="copyright">&copy; Sarah Barrow Web Design<br />
     	All rights reserved</div>
-    <div id="contact"><a href="contact.php" title="Hire me!"><span id="button_large">Contact Me</span><br /><span id="button_small">to get started!</span></a></div>
+    <div id="contact"><a href="contact.php" title="Hire me!" onClick="_gaq.push(['_trackEvent', 'button', 'submit', 'Contact']);"><span id="button_large">Contact Me</span><br /><span id="button_small">to get started!</span></a></div>
     <div id="social">
     	<ul>
         	<li>
             	
-                <a href="http://www.linkedin.com/in/scbarrow" title="LinkedIn" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'LinkedIn']);">
+                <a href="http://www.linkedin.com/in/scbarrow" title="LinkedIn" target="_blank" onClick="_gaq.push(['_trackEvent', 'social', 'click', 'LinkedIn']);">
                 <div class="ss-icon ss-social">&#xF612;</div>
                 LinkedIn</a>
             </li>
             <li>
-            	<a href="http://twitter.com/bearster22" title="Twitter" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'twitter']);">
+            	<a href="http://twitter.com/bearster22" title="Twitter" target="_blank" onClick="_gaq.push(['_trackEvent', 'social', 'click', 'Twitter']);">
                 <div class="ss-icon ss-social">&#xF611;</div>
                 Twitter</a>
             </li>
             <li>
-            	<a href="https://github.com/bearster22" title="GitHub" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'github']);">
+            	<a href="https://github.com/bearster22" title="GitHub" target="_blank" onClick="_gaq.push(['_trackEvent', 'social', 'click', 'Github']);">
                 <div class="ss-icon ss-social">&#xF671;</div>
                 Github</a>
             </li>

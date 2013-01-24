@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Sarah Barrow Web Design</title>
-<meta name="description" content="Sarah Barrow is a freelance front-end developer and web designer in Minneapolis, MN." />  
+<meta name="description" content="Sarah Barrow is a freelance and contract front-end developer and web designer in Minneapolis, MN." />  
 
 <!-- STYLES ETC -->
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
@@ -17,7 +17,7 @@
 <body>
 <header>
 	<hgroup>
-    		<div><a href="index.html" title="Sarah Barrow Web Design">SB</a></div>
+    		<div><a href="index.html" title="Sarah Barrow Web Design" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Home']);">SB</a></div>
             <h1>Sarah Barrow Web Design</h1>
             <h2>Freelance front-end development and web design</h2>
    	</hgroup>
@@ -25,11 +25,11 @@
   	
 <nav>
 	<ul>
-		<li><a href="web-portfolio.html" title="Portfolio">Portfolio</a></li>
-	    <li><a href="web-services.html" title="Services">Services</a></li>
-        <li><a href="photography.html" title="Photography and Design">Photography &amp; Design</a></li>
+		<li><a href="web-portfolio.html" title="Portfolio" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Portfolio']);">Portfolio</a></li>
+	    <li><a href="web-services.html" title="Services" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Services']);">Services</a></li>
+        <li><a href="photography.html" title="Photography and Design" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Photography']);">Photography &amp; Design</a></li>
         <!--<li><a href="blog/index.html" title="Blog">Blog</a></li>-->
-        <li><a href="contact.php" title="Contact">Hire Me!</a></li>
+        <li><a href="contact.php" title="Contact" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Contact']);">Hire Me!</a></li>
     </ul>
 </nav>
     
@@ -46,25 +46,25 @@
     <section id="home_nav">
 
     	<div class="ss-icon" id="portfolio_button">
-        	<a href="web-portfolio.html" title="Portfolio">
+        	<a href="web-portfolio.html" title="Portfolio" onClick="_gaq.push(['_trackEvent', 'button', 'click', 'Portfolio']);">
         		&#x1F4BB;<br />
            		<h1>Portfolio</h1>
             </a>
         </div>
         <div class="ss-icon" id="services_button">
-        	<a href="web-services.html" title="Services">
+        	<a href="web-services.html" title="Services" onClick="_gaq.push(['_trackEvent', 'button', 'click', 'Services']);">
 	        	&#xED50;<br />
     	        <h1>Services</h1>
         	</a>
         </div>
         <div class="ss-icon" id="photography_button">
-        	<a href="photography.html" title="Photography and Design">
+        	<a href="photography.html" title="Photography and Design" onClick="_gaq.push(['_trackEvent', 'button', 'click', 'Photography']);">
 	        	&#x1F4F7;<br />        	
     	        <h1>Photography</h1>
         	</a>
         </div>
         <div class="ss-icon" id="blog_button">
-        	<a href="contact.php" title="Contact Me">
+        	<a href="contact.php" title="Contact Me" onClick="_gaq.push(['_trackEvent', 'button', 'click', 'Contact']);">
 	        	&#x2709;<br />
     	        <h1>Contact Me</h1>
         	</a>
@@ -72,30 +72,30 @@
     </section>
     <section id="about">
     	<h1>More about me</h1>
-        <p>I've been doing "this" (whatever "this" is!) for 6 years, when I first taught myself to code. I picked up some other skills along the way, especially thanks to a great 4&ndash;year stint at Hamline University. I've been lucky enough to work on all kinds of projects, large and small, nonprofit and for-profit, hard-core coding to strategy and everything in between.</p>
-        <p>I like bikes, cats, and coffee. My husband and I are obsessive travellers. I laugh a lot. I buy  kitchsy, weird, meme-y tshirts. What else do you want to know? Reach out through the comment form or the various social media links below. I'm looking forward to talking with you!</p>
+        <p>I've been a web developer and designer for 6 years, since back in 2005 when I first taught myself to code HTML and CSS. I picked up a ton of other skills along the way, especially thanks to a great 4&ndash;year stint as Web Editor and then Web Communications Director at Hamline University. I've been fortunate to work on a huge range of projects: large and small, nonprofit and for-profit, hard-core coding to strategy and everything in between.</p>
+        <p>I like bikes, cats, and coffee. My husband and I are obsessive travellers. I laugh a lot. I buy too many weird meme tshirts. What else do you want to know? Reach out through the comment form, LinkedIn, or Twitter. I'm looking forward to talking with you!</p>
         </section>
 </article>
     
 <footer>
 	<div id="copyright">&copy; Sarah Barrow Web Design<br />
     	All rights reserved</div>
-    <div id="contact"><a href="contact.php" title="Contact me!"><span id="button_large">Contact Me</span><br /><span id="button_small">to get started!</span></a></div>
+    <div id="contact"><a href="contact.php" title="Contact me!" onClick="_gaq.push(['_trackEvent', 'button', 'submit', 'Contact']);"><span id="button_large">Contact Me</span><br /><span id="button_small">to get started!</span></a></div>
     <div id="social">
     	<ul>
         	<li>
             	
-                <a href="http://www.linkedin.com/in/scbarrow" title="LinkedIn" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'LinkedIn']);">
+                <a href="http://www.linkedin.com/in/scbarrow" title="LinkedIn" target="_blank" onClick="_gaq.push(['_trackEvent', 'social', 'click', 'LinkedIn']);">
                 <div class="ss-icon ss-social">&#xF612;</div>
                 LinkedIn</a>
             </li>
             <li>
-            	<a href="http://twitter.com/bearster22" title="Twitter" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'twitter']);">
+            	<a href="http://twitter.com/bearster22" title="Twitter" target="_blank" onClick="_gaq.push(['_trackEvent', 'social', 'click', 'Twitter']);">
                 <div class="ss-icon ss-social">&#xF611;</div>
                 Twitter</a>
             </li>
             <li>
-            	<a href="https://github.com/bearster22" title="GitHub" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'github']);">
+            	<a href="https://github.com/bearster22" title="GitHub" target="_blank" onClick="_gaq.push(['_trackEvent', 'social', 'click', 'Github']);">
                 <div class="ss-icon ss-social">&#xF671;</div>
                 Github</a>
             </li>

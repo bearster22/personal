@@ -20,7 +20,7 @@
 <body>
 <header>
 	<hgroup>
-    		<div><a href="index.html" title="Sarah Barrow Web Design">SB</a></div>
+    		<div><a href="index.html" title="Sarah Barrow Web Design" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Home']);">SB</a></div>
             <h1>Sarah Barrow Web Design</h1>
             <h2>Freelance front-end development and web design</h2>
    	</hgroup>
@@ -28,11 +28,11 @@
   	
 <nav>
 	<ul>
-		<li><a href="web-portfolio.html" title="Portfolio">Portfolio</a></li>
-	    <li><a href="web-services.html" title="Services">Services</a></li>
-        <li><a href="photography.html" title="Photography">Photography &amp; Design</a></li>
+		<li><a href="web-portfolio.html" title="Portfolio" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Portfolio']);">Portfolio</a></li>
+	    <li><a href="web-services.html" title="Services" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Services']);">Services</a></li>
+        <li><a href="photography.html" title="Photography" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Photography']);">Photography &amp; Design</a></li>
         <!--<li><a href="blog/index.html" title="Blog">Blog</a></li>-->
-        <li><a id="active_item" href="contact.php" title="Contact">Hire Me!</a></li>
+        <li><a id="active_item" href="contact.php" title="Contact" onClick="_gaq.push(['_trackEvent', 'navigation', 'click', 'Contact']);">Hire Me!</a></li>
     </ul>
 </nav>
     
@@ -85,7 +85,7 @@
                 
                 
                 
-                <input type="submit" value"Send away!" id="submit-button" />
+                <input type="submit" value"Send away!" id="submit-button" onClick="_gaq.push(['_trackEvent', 'button', 'submit', 'Submit Message']);" />
                 
              </form>
              
@@ -107,17 +107,17 @@
     	<ul>
         	<li>
             	
-                <a href="http://www.linkedin.com/in/scbarrow" title="LinkedIn" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'LinkedIn']);">
+                <a href="http://www.linkedin.com/in/scbarrow" title="LinkedIn" target="_blank" onClick="_gaq.push(['_trackEvent', 'social', 'click', 'LinkedIn']);">
                 <div class="ss-icon ss-social">&#xF612;</div>
                 LinkedIn</a>
             </li>
             <li>
-            	<a href="http://twitter.com/bearster22" title="Twitter" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'twitter']);">
+            	<a href="http://twitter.com/bearster22" title="Twitter" target="_blank" onClick="_gaq.push(['_trackEvent', 'social', 'click', 'Twitter']);">
                 <div class="ss-icon ss-social">&#xF611;</div>
                 Twitter</a>
             </li>
             <li>
-            	<a href="https://github.com/bearster22" title="GitHub" target="_blank" onClick="_gaq.push(['_trackEvent', 'external', 'click', 'github']);">
+            	<a href="https://github.com/bearster22" title="GitHub" target="_blank" onClick="_gaq.push(['_trackEvent', 'social', 'click', 'Github']);">
                 <div class="ss-icon ss-social">&#xF671;</div>
                 Github</a>
             </li>
